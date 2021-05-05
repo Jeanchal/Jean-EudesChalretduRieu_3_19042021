@@ -150,7 +150,11 @@ header{
   @include margin-hb;
   @include ombre;
   @media screen and (min-width: 890px){
-    margin-right: 25px;
+  margin-right: 25px;
+  }
+  &:hover{
+    color: $violet;
+    background-color: white;
   }
   &__block{
       @include flex-between;
@@ -306,18 +310,8 @@ main{
           }
     }
   }
-.commander{
-  padding-top: 20px;
-  @include flex-center;
-  &__bouton{
-    background-color: $violet;
-    color: white;
-    border-radius: 30px;
-    @include padding-btn-commander;
-    @include ombre;
-  }
-}
 footer{
+  font-size: 120%;
   z-index: 7;
   @include colonne-center;
   background-color: $gris;

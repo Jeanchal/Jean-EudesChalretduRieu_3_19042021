@@ -7,6 +7,10 @@
    display: flex;
    justify-content: space-between;
 }
+@mixin flex-around{
+  display: flex;
+  justify-content: space-around;
+}
 @mixin colonne{
     display: flex;
     flex-direction: column;
@@ -26,9 +30,6 @@
   }
 @mixin padding-btn{
     padding: 15px 20px 15px 20px;
-  }
-@mixin padding-btn-commander{
-    padding: 15px 30px 15px 30px;
   }
 @mixin ombre{
     box-shadow: 1px 3px 5px 1px gray;

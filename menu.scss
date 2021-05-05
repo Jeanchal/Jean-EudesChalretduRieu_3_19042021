@@ -24,11 +24,10 @@ header{
     }
 }
 main{
-    background-color: $beigeclair;
     #main{
+    background-color: $beigeclair;
     @include flex-center;
     width: 100%;
-    background-color: $beigeclair;
     position: relative;
     bottom: 40px;
     @include topradius;
@@ -41,6 +40,20 @@ main{
             max-width: initial;
             width: 100%;
             background-color: $beigeclair;
+          }
+        }
+        .commander{
+          @extend %Roboto-regular;
+          padding-top: 30px;
+          padding-bottom: 50px;
+          @include flex-center;
+          &__bouton{
+            background-color: $violet;
+            color: white;
+            font-size: 110%;
+            border-radius: 30px;
+            padding: 15px 50px 15px 50px;
+            @include ombre;
           }
         }
     }
@@ -59,7 +72,7 @@ main{
       }
          &__coeur{
         font-size: 150%;
-        color: white;
+        color: $beigeclair;
         @include txt-ombre;
         @media screen and (min-width: 890px){
             font-size: 170%;
@@ -74,20 +87,32 @@ main{
     margin-top: 30px;
     width: 100%;
     @include colonne-center;
-    h3{
-        width: 90%;
-        padding-bottom: 10px;
+    font-size: 120%;
+    @media screen and (min-width: 890px){
+      font-size: 120%;
+  }
+    &__titre{
+      text-align: start;
+      font-size: 90%;
+      width: 90%;
+      padding-bottom: 10px;
+      @media screen and (min-width: 890px){
+          padding-left: 7%;
+      }
+      h3{
         @extend %Roboto-light;
+        width: 55px;
+        border-bottom: 4px solid $vertclair;
         @media screen and (min-width: 890px){
-            padding-bottom: 20px;
-            padding-left: 7%;
+          font-size: 100%;
         }
+      }
     }
     .plat{
         width: 100%;
         @media screen and (min-width: 890px){
             @include flex-center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             }
             p{
                 margin-top: 5px;
@@ -97,31 +122,137 @@ main{
     .plat-conteneur{
         @include flex-between;
         background-color: white;
-        border-radius: 20px;
-        padding: 15px 15px 15px 15px;
+        overflow: hidden;
+        font-size: 90%;
+        border-radius: 15px;
         margin: 0 15px 30px 15px;
         @include ombre;
+        @media screen and (min-width: 890px){
+          @include colonne;
+          text-align: center;
+          justify-content: initial;
+          margin: 0 7px 0 7px;
+        }
+        @media screen and (min-width: 1000px){
+          margin: 0 10px 0 10px;
+        }
+        @media screen and (min-width: 1500px){
+          margin: 0 15px 0 15px;
+        }
+        &:hover{
+          background-color: $vertclair;
+          .plat-conteneur__txt .gras{
+            left: 70%;
+              @media screen and (min-width: 890px){
+                left: 0;
+                top: 5px;
+            }
+            @media screen and (min-width: 1000px){
+              top: 10px;
+          }
+          }
+        }
+        &__icon{
+          @include colonne-center;
+            text-align: center;
+            padding-top: 25px;
+            width: 70px;
+            font-size: 140%;
+            color:white;
+            @media screen and (min-width: 890px){
+              font-size: 170%;
+              padding-top: 10px;
+              width: 100%;
+          }
+          @media screen and (min-width: 1000px){
+            padding-top: 14px;
+        }
+         }
+         &--4elements{
+          @media screen and (min-width: 890px){
+              width: 204px;
+              height: 140px;
+              font-size: 65%;
+              @include colonne-center;
+            }
+            @media screen and (min-width: 1000px){
+              width: 226px;
+              height: 160px;
+              font-size: 75%;
+             }
+             @media screen and (min-width: 1200px){
+              width: 275px;
+              height: 170px;
+              font-size: 85%;
+             }
+             @media screen and (min-width: 1500px){
+              width: 305px;
+             }
+        }
           &--3elements{
             @media screen and (min-width: 890px){
-                width: 25%;
-                height: 110px;
-                font-size: 90%;
+                width: 275px;
+                height: 140px;
+                font-size: 65%;
                 @include colonne-center;
               }
-          }
-          &--4elements{
-            @media screen and (min-width: 890px){
-                width: 17.5%;
-                height: 120px;
-                font-size: 90%;
-                @include colonne-center;
-              }
+              @media screen and (min-width: 1000px){
+                width: 308px;
+                height: 160px;
+                font-size: 75%;
+               }
+               @media screen and (min-width: 1200px){
+                width: 375px;
+                height: 170px;
+                font-size: 85%;
+               }
+               @media screen and (min-width: 1500px){
+                width: 420px;
+               }
           }
           &__txt{
-              width: 80%;
+            padding: 10px 0 0 10px;
+            background-color:white;
+            width: 100%;
+              border-top-left-radius: 15px;
+              border-bottom-left-radius: 15px;
               @media screen and (min-width: 890px){
-                width: 100%;
+                width: 97.5%;
                 text-align: center;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 15px;
+                height: 50%;
+                font-size: 95%;
+                padding: 20px 5px 5px 10px;
+              }
+              h4{
+                font-size: 105%;
+              }
+              p{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 85%;
+                @media screen and (min-width: 890px){
+                  width: 100%;
+                }
+              }
+              .gras{
+                text-align: end;
+                width: 80px;
+                position: relative;
+                bottom: 18px;
+                left: 90%;
+                font-size: 90%;
+                color: $gris;
+                @media screen and (min-width: 890px){
+                  text-align: center;
+                  width: 100%;
+                  left: 0;
+                  bottom: 0;
+                  top: 40px;
+                  font-size: 130%;
+                }
               }
           }
     }

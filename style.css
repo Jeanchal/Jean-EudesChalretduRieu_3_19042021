@@ -200,6 +200,10 @@ header a, header a:hover, header a:active, header a:visited {
     margin-right: 25px;
   }
 }
+.nav-conteneur:hover {
+  color: #9356DC;
+  background-color: white;
+}
 .nav-conteneur__block {
   display: flex;
   justify-content: space-between;
@@ -385,21 +389,8 @@ main a, main a:hover, main a:active, main a:visited {
   color: #9356DC;
 }
 
-.commander {
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.commander__bouton {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 30px;
-  padding: 15px 30px 15px 30px;
-  box-shadow: 1px 3px 5px 1px gray;
-}
-
 footer {
+  font-size: 120%;
   z-index: 7;
   display: flex;
   flex-direction: column;
