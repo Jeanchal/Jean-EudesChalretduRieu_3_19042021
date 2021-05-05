@@ -1,0 +1,36 @@
+@mixin center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+@mixin colonne{
+    display: flex;
+    flex-direction: column;
+  }
+@mixin colonne-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+@mixin margin-hb{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+@mixin padding-hb{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+@mixin padding-btn{
+    padding: 15px 20px 15px 20px;
+  }
+@mixin ombre{
+    box-shadow: 1px 3px 5px 1px gray;
+  }
+@mixin topradius{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+@mixin fixed{
+  position: sticky;
+  top: 0.1px;
+}

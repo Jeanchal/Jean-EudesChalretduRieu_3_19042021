@@ -1,0 +1,206 @@
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+@import "utils/extensions.scss";
+
+body{
+margin-top: 0;
+margin-bottom: 0;
+max-width: 1450px;
+@extend %centrage-responsive;
+  a{
+  text-decoration: none;
+  }
+  p{ 
+  text-align: center;
+  }
+  figure{
+  position: relative;
+  margin: 0;
+  }
+}
+header{
+  a, a:hover, a:active, a:visited{
+  color: black;
+  }
+}
+.header-section{
+  @include colonne;
+&--size{
+  height: 70px;
+  box-shadow: -2px 3px 5px 0px gray;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+&__figure{
+    @include center
+}
+&__localisation{
+    display: flex;
+    justify-content: center;
+    background-color: $beige;
+    width: 100%;
+    color: $gris;
+    @include padding-hb;
+}
+}
+.header-explorer{
+  background-color: $beigeclair;
+  width: 100%;
+  @include colonne-center;
+  @include padding-hb;
+      p{
+          width: 80%;
+          color: $gris;
+      }
+      &__bouton{
+          background-color: $violet;
+          color: white;
+          border-radius: 30px;
+          @include padding-btn;
+          @include ombre;
+      }
+}
+.nav-section{
+  width: 90%;
+  @include colonne-center;
+  @include margin-hb;
+      h3{
+          width: 100%;
+          @extend %max600;
+      }
+      nav{
+      width: 100%;
+      @extend %max600;
+      @include colonne-center;
+      }
+}
+.nav-conteneur{
+  border-radius: 20px;
+  width: 100%;
+  background-color: $beigeclair;
+  @include margin-hb;
+  @include ombre;
+  &__block{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      height: 100px;
+      border-radius: 20px;
+      &__num{
+          background-color: $violet;
+          border-radius: 20px;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          right: 10px;
+          color: white;
+          @include center;
+          }
+      &__icon{
+          color: $grisclair;
+      }
+      }
+}
+main{
+  background-color: $beigeclair;
+  @include colonne-center;
+  a, a:hover, a:active, a:visited{
+  color: black;
+  }
+}
+.restaurant{
+  width: 90%;
+  @include colonne-center;
+  @include padding-hb;
+  @extend %max600;
+  @media screen and (min-width: 890px){
+  max-width: 850px;
+}
+  h3{
+      width: 100%;
+      }
+  &-conteneur{
+      width: 100%;
+      @media screen and (min-width: 890px){
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+  }
+  &-block{
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    @include colonne-center;
+    @include margin-hb;
+    @include ombre;
+    @media screen and (min-width: 890px){
+      margin-right: 20px;
+      width: 370px;
+  }
+            &__figure{
+            width: 600px;
+            height: 200px;
+                &__image{
+                position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                }
+            }
+        &__txt{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        @include margin-hb;
+        &__nouveau{
+          padding: 10px 15px 15px 15px;
+          height: 20px;
+          position: relative;
+          bottom: 200px;
+          left: 55px;
+          color: $vert;
+          background-color: $vertclair;
+          }
+            &__coeur{
+            display: flex;
+            align-items: center;
+                &--none{
+                display: none;
+                }
+                &--violet{
+                color: $violet;
+                }
+            }
+        }
+    }
+  }
+footer{
+  @include colonne-center;
+  background-color: $gris;
+  color: white;
+    a, a:hover, a:active, a:visited{
+        color: white;
+  }
+  #footer{
+      width: 90%;
+      padding-bottom: 30px;
+      @extend %max600;
+      @include colonne-center;
+      @media screen and (min-width: 890px){
+        max-width: 850px;
+      }
+      section{
+        width: 100%;
+    }
+  }
+}

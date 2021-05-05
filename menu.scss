@@ -1,0 +1,98 @@
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+@import "utils/extensions.scss";
+
+header{
+    height: 400px;
+}
+.header{
+    &--lapalettedugout{
+    background: no-repeat url(images/lapalettedugout.jpg);
+    background-size: cover;
+    }
+    &--lanoteenchantee{
+    background: no-repeat url(images/lanoteenchantee.jpg);
+    background-size: cover;
+    }
+    &--alafrancaise{
+    background: no-repeat url(images/alafrancaise.jpg);
+    background-size: cover;
+    }
+    &--ledelicedessens{
+    background: no-repeat url(images/ledelicedessens.jpg);
+    background-size: cover;
+    }
+    &__arrow{
+    color: $gris;
+    position: relative;
+    left: 30px;
+    top: 22px;
+    z-index: 2;
+    }
+    &__logoposition{
+    position: relative;
+    width: 100%;
+    @extend %max600;
+    @include center;
+    @media screen and (min-width: 890px){
+        max-width: 850px;
+    }
+    }
+}
+main{
+    background-color: $beigeclair;
+    #main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $beigeclair;
+    position: relative;
+    bottom: 40px;
+    @include topradius;
+        section{
+        width: 90%;
+        @include topradius;
+        @extend %max600;
+        @media screen and (min-width: 890px){
+            max-width: 850px;
+          }
+        }
+    }
+}
+.main-titre{
+    display: flex;
+    justify-content: space-between;
+    &__coeur{
+        display: flex;
+        align-items: center;
+        &--violet{
+            color: $violet;
+        }
+        &--none{
+            display: none;
+        }
+    }
+}
+#plat{
+    @media screen and (min-width: 890px){
+        display: flex;
+        background-color: blue;
+        justify-content: space-between;
+      }
+}
+.plat-conteneur{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    @include ombre;
+    @include padding-btn;
+    @include margin-hb;
+    @media screen and (min-width: 890px){
+        width: 210px;
+        height: 70px;
+      }
+      &__txt{
+          width: 70%;
+      }
+}
