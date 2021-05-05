@@ -3,49 +3,124 @@ body {
   margin-right: auto;
 }
 
-footer #footer, .restaurant, .nav-section nav, .nav-section h3 {
+footer #footer, .restaurant, .nav-section nav, .nav-section h3, .pre-header__logoposition {
   max-width: 600px;
+}
+
+.restaurant-block__txt h4, .nav-conteneur__block__num, .nav-conteneur__block h4, body ul {
+  font-family: "Roboto-regular", Arial, Georgia, Verdana, Impact;
+}
+
+body h4, body p {
+  font-family: "Roboto-light", Arial, Georgia, Verdana, Impact;
+}
+
+.restaurant-block__txt__icons__nouveau, body h3 {
+  font-family: "Roboto-gras", Arial, Georgia, Verdana, Impact;
+}
+
+body h2, body h1 {
+  font-family: "Shrikhand", Arial, Georgia, Verdana, Impact;
+}
+
+footer #footer section h3 {
+  font-family: "Shrikhand", Arial, Georgia, Verdana, Impact;
+  font-size: 110%;
+  font-weight: lighter;
 }
 
 body {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 1450px;
+  min-width: 300px;
+}
+@media screen and (min-width: 890px) {
+  body {
+    font-size: 110%;
+  }
 }
 body a {
   text-decoration: none;
 }
 body p {
-  text-align: center;
+  margin: 0;
+}
+body h2 {
+  font-size: 200%;
+}
+body h4 {
+  margin: 0;
+}
+body ul {
+  font-size: 85%;
+}
+body li {
+  margin-top: 10px;
+  list-style-type: none;
+  position: relative;
+  right: 40px;
 }
 body figure {
   position: relative;
   margin: 0;
 }
 
-header a, header a:hover, header a:active, header a:visited {
-  color: black;
-}
-
-.header-section {
+.pre-header {
+  position: sticky;
+  top: 0.1px;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
-.header-section--size {
+.pre-header a, .pre-header a:hover, .pre-header a:active, .pre-header a:visited {
+  color: black;
+}
+.pre-header--size {
   height: 70px;
   box-shadow: -2px 3px 5px 0px gray;
   background-color: white;
   z-index: 1;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
-.header-section__figure {
+.pre-header__figure {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.pre-header__arrow {
+  color: #353535;
+  position: relative;
+  left: 30px;
+  z-index: 11;
+  font-size: 140%;
+}
+.pre-header__logoposition {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 890px) {
+  .pre-header__logoposition {
+    max-width: 850px;
+  }
+}
+
+header {
+  font-size: 120%;
+  z-index: 8;
+}
+header a, header a:hover, header a:active, header a:visited {
+  color: black;
+}
+
 .header-section__localisation {
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: #eaeaea;
   width: 100%;
@@ -63,20 +138,27 @@ header a, header a:hover, header a:active, header a:visited {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.header-explorer p {
+.header-explorer h3 {
+  text-align: center;
+  width: 60%;
+}
+.header-explorer__paragraphe {
   width: 80%;
   color: #353535;
+  text-align: center;
+  margin-bottom: 25px;
 }
 .header-explorer__bouton {
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
+  margin-bottom: 25px;
   padding: 15px 20px 15px 20px;
   box-shadow: 1px 3px 5px 1px gray;
 }
 
 .nav-section {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,48 +166,107 @@ header a, header a:hover, header a:active, header a:visited {
   margin-bottom: 20px;
 }
 .nav-section h3 {
-  width: 100%;
+  width: 90%;
+}
+@media screen and (min-width: 890px) {
+  .nav-section h3 {
+    max-width: initial;
+  }
 }
 .nav-section nav {
-  width: 100%;
+  width: 90%;
+  margin-left: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 890px) {
+  .nav-section nav {
+    flex-direction: initial;
+    max-width: initial;
+  }
+}
 
 .nav-conteneur {
-  border-radius: 20px;
+  border-radius: 30px;
   width: 100%;
   background-color: #f6f6f6;
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 1px 3px 5px 1px gray;
 }
+@media screen and (min-width: 890px) {
+  .nav-conteneur {
+    margin-right: 25px;
+  }
+}
 .nav-conteneur__block {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 80%;
-  height: 100px;
-  border-radius: 20px;
+  align-items: center;
+  width: 90%;
+  height: 85px;
+  border-radius: 30px;
+  color: #7e7e7e;
+}
+@media screen and (min-width: 400px) {
+  .nav-conteneur__block {
+    width: 85%;
+    font-size: 130%;
+  }
+}
+@media screen and (min-width: 890px) {
+  .nav-conteneur__block {
+    height: 100px;
+    width: 90%;
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .nav-conteneur__block {
+    width: 80%;
+  }
+}
+.nav-conteneur__block:hover {
+  color: #9356DC;
 }
 .nav-conteneur__block__num {
   background-color: #9356DC;
-  border-radius: 20px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  right: 10px;
   color: white;
+  border-radius: 30px;
+  position: relative;
+  right: 15px;
+  padding: 5px 12px 5px 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 890px) {
+  .nav-conteneur__block__num {
+    position: relative;
+    left: 52%;
+    top: 50px;
+    font-size: 140%;
+    padding: 7px 15px 7px 15px;
+  }
+}
 .nav-conteneur__block__icon {
-  color: #7e7e7e;
+  font-size: 120%;
+  padding-right: 10px;
+}
+@media screen and (min-width: 890px) {
+  .nav-conteneur__block__icon {
+    padding-right: 20px;
+    font-size: 140%;
+  }
+}
+.nav-conteneur__block h4 {
+  font-size: 85%;
+  color: black;
 }
 
 main {
+  z-index: 9;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -145,11 +286,12 @@ main a, main a:hover, main a:active, main a:visited {
 }
 @media screen and (min-width: 890px) {
   .restaurant {
-    max-width: 850px;
+    max-width: initial;
   }
 }
 .restaurant h3 {
   width: 100%;
+  font-size: 140%;
 }
 .restaurant-conteneur {
   width: 100%;
@@ -176,12 +318,12 @@ main a, main a:hover, main a:active, main a:visited {
 @media screen and (min-width: 890px) {
   .restaurant-block {
     margin-right: 20px;
-    width: 370px;
+    width: 46%;
   }
 }
 .restaurant-block__figure {
   width: 600px;
-  height: 200px;
+  height: 180px;
 }
 .restaurant-block__figure__image {
   position: absolute;
@@ -200,30 +342,65 @@ main a, main a:hover, main a:active, main a:visited {
   display: flex;
   justify-content: space-between;
   width: 90%;
+  height: 40px;
+  padding-right: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.restaurant-block__txt__nouveau {
-  padding: 10px 15px 15px 15px;
-  height: 20px;
-  position: relative;
-  bottom: 200px;
-  left: 55px;
-  color: #008766;
-  background-color: #99E2D0;
+.restaurant-block__txt h4 {
+  min-width: 140px;
 }
-.restaurant-block__txt__coeur {
+.restaurant-block__txt p {
+  padding-top: 5px;
+}
+.restaurant-block__txt__icons {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.restaurant-block__txt__coeur--none {
-  display: none;
+.restaurant-block__txt__icons__nouveau {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 30px;
+  width: 70px;
+  position: relative;
+  bottom: 190px;
+  left: 30px;
+  color: #008766;
+  background-color: #99E2D0;
+  font-size: 120%;
 }
-.restaurant-block__txt__coeur--violet {
+@media screen and (min-width: 890px) {
+  .restaurant-block__txt__icons__nouveau {
+    width: 85px;
+  }
+}
+.restaurant-block__txt__icons__coeur {
+  font-size: 170%;
+  color: white;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
+}
+.restaurant-block__txt__icons__coeur:hover {
+  text-shadow: initial;
   color: #9356DC;
 }
 
+.commander {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commander__bouton {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  padding: 15px 30px 15px 30px;
+  box-shadow: 1px 3px 5px 1px gray;
+}
+
 footer {
+  z-index: 7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,15 +413,20 @@ footer a, footer a:hover, footer a:active, footer a:visited {
 footer #footer {
   width: 90%;
   padding-bottom: 30px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 890px) {
   footer #footer {
-    max-width: 850px;
+    max-width: initial;
   }
 }
 footer #footer section {
   width: 100%;
+}
+footer #footer section ul span {
+  font-size: 80%;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

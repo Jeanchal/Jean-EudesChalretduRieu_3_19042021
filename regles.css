@@ -1,0 +1,20 @@
+
+.gras{
+	font-family: 'Roboto-gras', Arial, Georgia, Verdana, Impact;
+}
+@font-face{
+    font-family: 'Roboto-regular';
+    src: url('base/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Roboto-light';
+    src: url('base/Roboto-Light.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Roboto-gras';
+    src: url('base/Roboto-Bold.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Shrikhand';
+    src: url('base/Shrikhand-Regular.ttf') format('truetype');
+}

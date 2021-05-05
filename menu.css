@@ -1,45 +1,30 @@
-main #main section, .header__logoposition {
+main #main section {
   max-width: 600px;
 }
 
+.menu h3 {
+  font-family: "Roboto-light", Arial, Georgia, Verdana, Impact;
+}
+
 header {
-  height: 400px;
+  height: 300px;
 }
 
 .header--lapalettedugout {
-  background: no-repeat url(images/lapalettedugout.jpg);
+  background: no-repeat url(base/images/lapalettedugout.jpg);
   background-size: cover;
 }
 .header--lanoteenchantee {
-  background: no-repeat url(images/lanoteenchantee.jpg);
+  background: no-repeat url(base/images/lanoteenchantee.jpg);
   background-size: cover;
 }
 .header--alafrancaise {
-  background: no-repeat url(images/alafrancaise.jpg);
+  background: no-repeat url(base/images/alafrancaise.jpg);
   background-size: cover;
 }
 .header--ledelicedessens {
-  background: no-repeat url(images/ledelicedessens.jpg);
+  background: no-repeat url(base/images/ledelicedessens.jpg);
   background-size: cover;
-}
-.header__arrow {
-  color: #353535;
-  position: relative;
-  left: 30px;
-  top: 22px;
-  z-index: 2;
-}
-.header__logoposition {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (min-width: 890px) {
-  .header__logoposition {
-    max-width: 850px;
-  }
 }
 
 main {
@@ -47,6 +32,7 @@ main {
 }
 main #main {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   background-color: #f6f6f6;
@@ -56,55 +42,119 @@ main #main {
   border-top-right-radius: 50px;
 }
 main #main section {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 @media screen and (min-width: 890px) {
   main #main section {
-    max-width: 850px;
+    max-width: initial;
+    width: 100%;
+    background-color: #f6f6f6;
   }
 }
 
 .main-titre {
+  align-items: center;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
-.main-titre__coeur {
-  display: flex;
-  align-items: center;
-}
-.main-titre__coeur--violet {
-  color: #9356DC;
-}
-.main-titre__coeur--none {
-  display: none;
-}
-
 @media screen and (min-width: 890px) {
-  #plat {
-    display: flex;
-    background-color: blue;
-    justify-content: space-between;
+  .main-titre {
+    justify-content: flex-start;
   }
 }
+@media screen and (min-width: 890px) {
+  .main-titre h2 {
+    margin-right: 70px;
+  }
+}
+.main-titre__coeur {
+  font-size: 150%;
+  color: white;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
+}
+@media screen and (min-width: 890px) {
+  .main-titre__coeur {
+    font-size: 170%;
+  }
+}
+.main-titre__coeur:hover {
+  text-shadow: initial;
+  color: #9356DC;
+}
 
-.plat-conteneur {
+.menu {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu h3 {
+  width: 90%;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 890px) {
+  .menu h3 {
+    padding-bottom: 20px;
+    padding-left: 7%;
+  }
+}
+.menu .plat {
+  width: 100%;
+}
+@media screen and (min-width: 890px) {
+  .menu .plat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.menu .plat p {
+  margin-top: 5px;
+  font-size: 85%;
+}
+.menu .plat-conteneur {
   display: flex;
   justify-content: space-between;
   background-color: white;
   border-radius: 20px;
+  padding: 15px 15px 15px 15px;
+  margin: 0 15px 30px 15px;
   box-shadow: 1px 3px 5px 1px gray;
-  padding: 15px 20px 15px 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 @media screen and (min-width: 890px) {
-  .plat-conteneur {
-    width: 210px;
-    height: 70px;
+  .menu .plat-conteneur--3elements {
+    width: 25%;
+    height: 110px;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-.plat-conteneur__txt {
-  width: 70%;
+@media screen and (min-width: 890px) {
+  .menu .plat-conteneur--4elements {
+    width: 17.5%;
+    height: 120px;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.menu .plat-conteneur__txt {
+  width: 80%;
+}
+@media screen and (min-width: 890px) {
+  .menu .plat-conteneur__txt {
+    width: 100%;
+    text-align: center;
+  }
 }/*# sourceMappingURL=menu.css.map */

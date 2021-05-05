@@ -5,6 +5,20 @@ margin-right: auto;
 %max600{
     max-width: 600px;
 }
-%max850{
-    max-width: 850px;
+%Roboto-regular{
+    font-family: 'Roboto-regular', Arial, Georgia, Verdana, Impact;
+}
+%Roboto-light{
+    font-family: 'Roboto-light', Arial, Georgia, Verdana, Impact;
+}
+%Roboto-gras{
+    font-family: 'Roboto-gras', Arial, Georgia, Verdana, Impact;
+}
+%Shrikland{
+    font-family: 'Shrikhand', Arial, Georgia, Verdana, Impact;
+}
+%Shrikland-light{
+    font-family: 'Shrikhand', Arial, Georgia, Verdana, Impact;
+    font-size: 110%;
+    font-weight: lighter;
 }

@@ -1,8 +1,12 @@
-@mixin center{
+@mixin flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
   }
+@mixin flex-between{
+   display: flex;
+   justify-content: space-between;
+}
 @mixin colonne{
     display: flex;
     flex-direction: column;
@@ -23,8 +27,14 @@
 @mixin padding-btn{
     padding: 15px 20px 15px 20px;
   }
+@mixin padding-btn-commander{
+    padding: 15px 30px 15px 30px;
+  }
 @mixin ombre{
     box-shadow: 1px 3px 5px 1px gray;
+  }
+@mixin txt-ombre{
+    text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
   }
 @mixin topradius{
     border-top-left-radius: 50px;
