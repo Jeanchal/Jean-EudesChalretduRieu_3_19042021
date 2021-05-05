@@ -1,0 +1,262 @@
+body
+{
+    margin: 0;
+    max-width: 500px;
+    font-size: 140%;
+}
+p
+{ 
+    text-align: center;
+}
+#section-nav
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#section-restaurant
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#section-footer
+{
+    width: 500px;
+}
+.element-margin
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.element-padding
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.top-radius
+{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.element-20radius
+{
+    border-radius: 20px;
+}
+.element-30radius
+{
+    border-radius: 30px;
+}
+.element-hauteur
+{
+    height: 100px;
+}
+.restaurant-figure
+{
+    width: 450px;
+    height: 250px;
+    left: 55px;
+}
+.restaurant-image
+{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+figure
+{
+	position: relative;
+	margin: 0;
+}
+a
+{
+    text-decoration: none;
+}
+header a, header a:hover, header a:visited, header a:active, main a, main a:hover, main a:active, main a:visited
+{
+    color: black;
+}
+footer a, footer a:active, footer a:visited
+{
+    color: white;
+}
+.txt-blanc
+{
+    color: white;
+}
+.txt-gris
+{
+    color: rgb(126, 126, 126)
+}
+.txt-grisfoncé
+{
+    color: rgb(53, 53, 53)
+}
+.txt-vertfoncé
+{
+    color: rgb(0, 135, 102)
+}
+.txt-violet
+{
+    color: #9356DC;
+}
+.violet
+{
+    background-color: #9356DC;
+}
+.rose
+{
+    background-color: #FF79DA;
+}
+.vert
+{
+    background-color: #99E2D0;
+}
+.vert-foncé
+{
+    background-color: rgb(0, 135, 102)
+}
+.beige
+{
+    background-color: rgb(246, 246, 246);
+}
+.beige-foncé
+{
+    background-color: rgb(234, 234, 234)
+}
+.gris
+{
+    background-color: rgb(126, 126, 126)
+}
+.gris-foncé
+{
+    background-color: rgb(53, 53, 53)
+}
+.blanc
+{
+    background-color: white;
+}
+.flex
+{
+    display: flex;
+}
+.flex-colonnes
+{
+    flex-direction: column;
+}
+.flex-aligncenter
+{
+    align-items: center;
+}
+.flex-justifycenter
+{
+    justify-content: center;
+}
+.flex-spacebetween
+{
+    justify-content: space-between;
+}
+.flex-start
+{
+    justify-content: flex-start;
+}
+.largeur-max
+{
+    width: 100%;
+}
+.largeur-90pc
+{
+    width: 90%;
+}
+.largeur-80pc
+{
+    width: 80%;
+}
+.largeur-30pc
+{
+    width: 30%;
+}
+.logo-size
+{
+    height: 70px;
+    box-shadow: -2px 3px 5px 0px gray;
+    z-index: 1;
+}
+.logo-position
+{
+    position: relative;
+    bottom: 10px;
+}
+.icon-ronde
+{
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: 10px;
+}
+.ombre
+{
+    box-shadow: 1px 3px 5px 1px gray;
+}
+.gras
+{
+    font-weight: bold;
+}
+.bouton
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.figure-nouveau
+{
+    padding: 10px 15px 15px 15px;
+    height: 20px;
+    position: relative;
+    top: 19px;
+    right: 13%;
+}
+.none
+{
+    display: none;
+}
+.header-arrow
+{
+    position: relative;
+    left: 30px;
+    top: 22px;
+    z-index: 2;
+}
+.header-background
+{
+    height: 400px;
+}
+#header-background-ledelicedessens
+{
+    background: no-repeat url(images/ledelicedessens.jpg);
+    background-size: cover;
+}
+#header-background-lapalettedugout
+{
+    background: no-repeat url(images/lapalettedugout.jpg);
+    background-size: cover;
+}
+#header-background-alafrancaise
+{
+    background: no-repeat url(images/alafrancaise.jpg);
+    background-size: cover;
+}
+#header-background-lanoteenchantée
+{
+    background: no-repeat url(images/lanoteenchantee.jpg);
+    background-size: cover;
+}
+.main-position
+{
+    position: relative;
+    bottom: 40px;
+}
