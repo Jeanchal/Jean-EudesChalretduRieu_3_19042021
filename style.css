@@ -7,15 +7,16 @@ footer #footer, .restaurant, .nav-section nav, .nav-section h3, .pre-header__log
   max-width: 600px;
 }
 
-.restaurant-block__txt h4, .nav-conteneur__block__num, .nav-conteneur__block h4, body ul {
+.restaurant-block__txt__icons__nouveau, .nav-conteneur__block__num, .nav-conteneur__block h4, body ul, body h3 {
   font-family: "Roboto-regular", Arial, Georgia, Verdana, Impact;
 }
 
 body h4, body p {
   font-family: "Roboto-light", Arial, Georgia, Verdana, Impact;
+  font-weight: lighter;
 }
 
-.restaurant-block__txt__icons__nouveau, body h3 {
+.restaurant-block__txt h4 {
   font-family: "Roboto-gras", Arial, Georgia, Verdana, Impact;
 }
 
@@ -48,6 +49,9 @@ body p {
 }
 body h2 {
   font-size: 200%;
+}
+body h3 {
+  margin-bottom: 5px;
 }
 body h4 {
   margin: 0;
@@ -154,7 +158,7 @@ header a, header a:hover, header a:active, header a:visited {
   border-radius: 30px;
   margin-bottom: 25px;
   padding: 15px 20px 15px 20px;
-  box-shadow: 1px 3px 5px 1px gray;
+  box-shadow: 1px 3px 5px 1px #eaeaea;
 }
 
 .nav-section {
@@ -193,7 +197,7 @@ header a, header a:hover, header a:active, header a:visited {
   background-color: #f6f6f6;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 3px 5px 1px gray;
+  box-shadow: 1px 3px 5px 1px #eaeaea;
 }
 @media screen and (min-width: 890px) {
   .nav-conteneur {
@@ -208,7 +212,7 @@ header a, header a:hover, header a:active, header a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 85%;
   height: 85px;
   border-radius: 30px;
   color: #7e7e7e;
@@ -222,13 +226,33 @@ header a, header a:hover, header a:active, header a:visited {
 @media screen and (min-width: 890px) {
   .nav-conteneur__block {
     height: 100px;
-    width: 90%;
-    font-size: 100%;
+    width: 100%;
+    font-size: 90%;
   }
 }
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1000px) {
   .nav-conteneur__block {
-    width: 80%;
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 1290px) {
+  .nav-conteneur__block {
+    font-size: 130%;
+  }
+}
+.nav-conteneur__block h4 {
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media screen and (min-width: 890px) {
+  .nav-conteneur__block h4 {
+    position: relative;
+    right: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-conteneur__block h4 {
+    right: 40px;
   }
 }
 .nav-conteneur__block:hover {
@@ -248,20 +272,27 @@ header a, header a:hover, header a:active, header a:visited {
 @media screen and (min-width: 890px) {
   .nav-conteneur__block__num {
     position: relative;
-    left: 52%;
+    left: 42%;
     top: 50px;
     font-size: 140%;
     padding: 7px 15px 7px 15px;
   }
 }
+@media screen and (min-width: 890px) and (min-width: 1000px) {
+  .nav-conteneur__block__num {
+    padding: 7px 18px 7px 18px;
+  }
+}
 .nav-conteneur__block__icon {
+  text-align: center;
   font-size: 120%;
   padding-right: 10px;
 }
 @media screen and (min-width: 890px) {
   .nav-conteneur__block__icon {
-    padding-right: 20px;
     font-size: 140%;
+    position: relative;
+    right: 30px;
   }
 }
 .nav-conteneur__block h4 {
@@ -275,6 +306,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 890px) {
+  main {
+    margin-top: 60px;
+  }
 }
 main a, main a:hover, main a:active, main a:visited {
   color: black;
@@ -295,7 +331,7 @@ main a, main a:hover, main a:active, main a:visited {
 }
 .restaurant h3 {
   width: 100%;
-  font-size: 140%;
+  font-size: 150%;
 }
 .restaurant-conteneur {
   width: 100%;
@@ -317,7 +353,7 @@ main a, main a:hover, main a:active, main a:visited {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 3px 5px 1px gray;
+  box-shadow: 1px 3px 5px 1px #eaeaea;
 }
 @media screen and (min-width: 890px) {
   .restaurant-block {
@@ -327,7 +363,17 @@ main a, main a:hover, main a:active, main a:visited {
 }
 .restaurant-block__figure {
   width: 600px;
-  height: 180px;
+  height: 170px;
+}
+@media screen and (min-width: 500px) {
+  .restaurant-block__figure {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 890px) {
+  .restaurant-block__figure {
+    height: 230px;
+  }
 }
 .restaurant-block__figure__image {
   position: absolute;
@@ -363,16 +409,16 @@ main a, main a:hover, main a:active, main a:visited {
   justify-content: center;
 }
 .restaurant-block__txt__icons__nouveau {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0 15px;
   height: 30px;
   width: 70px;
   position: relative;
-  bottom: 190px;
+  bottom: 180px;
   left: 30px;
   color: #008766;
   background-color: #99E2D0;
-  font-size: 120%;
+  border-radius: 5px;
+  font-size: 110%;
 }
 @media screen and (min-width: 890px) {
   .restaurant-block__txt__icons__nouveau {

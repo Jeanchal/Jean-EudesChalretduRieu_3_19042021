@@ -3,7 +3,7 @@
 @import "utils/extensions.scss";
 
 header{
-    height: 300px;
+    height: 250px;
 }
 .header{
     &--lapalettedugout{
@@ -25,6 +25,7 @@ header{
 }
 main{
     #main{
+    font-size: 78%;
     background-color: $beigeclair;
     @include flex-center;
     width: 100%;
@@ -36,10 +37,13 @@ main{
         @include colonne-center;
         @include topradius;
         @extend %max600;
+        background-color: $beigeclair;
+        @media screen and (min-width: 450px){
+          font-size: 110%;
+        }
         @media screen and (min-width: 890px){
             max-width: initial;
             width: 100%;
-            background-color: $beigeclair;
           }
         }
         .commander{
@@ -61,16 +65,28 @@ main{
 .main-titre{
     align-items: center;
     width: 90%;
+    margin-top: 10px;
     @include flex-between;
-    @media screen and (min-width: 890px){
+    @media screen and (min-width: 350px){
         justify-content: flex-start;
       }
+      @media screen and (min-width: 890px){
+        width: 85%;
+      }
       h2{
-        @media screen and (min-width: 890px){
-            margin-right: 70px;
+        font-weight: lighter;
+        font-size: 207%;
+        margin-right: 5px;
+        @include txt-hidden;
+        @media screen and (min-width: 350px){
+            margin-right: 40px;
+          }
+          @media screen and (min-width: 1000px){
+            font-size: 250%;
           }
       }
          &__coeur{
+        margin-right: 15px;
         font-size: 150%;
         color: $beigeclair;
         @include txt-ombre;
@@ -84,7 +100,6 @@ main{
         }
 }
 .menu{
-    margin-top: 30px;
     width: 100%;
     @include colonne-center;
     font-size: 120%;
@@ -102,9 +117,14 @@ main{
       h3{
         @extend %Roboto-light;
         width: 55px;
+        padding-bottom: 5px;
         border-bottom: 4px solid $vertclair;
         @media screen and (min-width: 890px){
           font-size: 100%;
+        }
+        @media screen and (min-width: 1000px){
+          padding: 10px 0 5px 0;
+          font-size: 120%;
         }
       }
     }
@@ -142,10 +162,13 @@ main{
         &:hover{
           background-color: $vertclair;
           .plat-conteneur__txt .gras{
-            left: 70%;
+            left: 60%;
+            @media screen and (min-width: 500px){
+              left: 70%;
+          }
               @media screen and (min-width: 890px){
                 left: 0;
-                top: 5px;
+                top: 3px;
             }
             @media screen and (min-width: 1000px){
               top: 10px;
@@ -160,25 +183,25 @@ main{
             font-size: 140%;
             color:white;
             @media screen and (min-width: 890px){
-              font-size: 170%;
-              padding-top: 10px;
+              padding: 5px;
+              font-size: 250%;
               width: 100%;
           }
           @media screen and (min-width: 1000px){
-            padding-top: 14px;
+            padding-top: 12px;
         }
          }
          &--4elements{
           @media screen and (min-width: 890px){
               width: 204px;
-              height: 140px;
+              height: 130px;
               font-size: 65%;
               @include colonne-center;
             }
             @media screen and (min-width: 1000px){
               width: 226px;
               height: 160px;
-              font-size: 75%;
+              font-size: 70%;
              }
              @media screen and (min-width: 1200px){
               width: 275px;
@@ -192,7 +215,7 @@ main{
           &--3elements{
             @media screen and (min-width: 890px){
                 width: 275px;
-                height: 140px;
+                height: 130px;
                 font-size: 65%;
                 @include colonne-center;
               }
@@ -211,29 +234,37 @@ main{
                }
           }
           &__txt{
-            padding: 10px 0 0 10px;
+            padding: 12px 0 0 12px;
             background-color:white;
             width: 100%;
+            font-size: 105%;
               border-top-left-radius: 15px;
               border-bottom-left-radius: 15px;
               @media screen and (min-width: 890px){
                 width: 97.5%;
-                text-align: center;
                 border-bottom-left-radius: 0;
                 border-top-right-radius: 15px;
                 height: 50%;
-                font-size: 95%;
-                padding: 20px 5px 5px 10px;
+                font-size: 115%;
+                padding: 20px 7px 5px 7px;
               }
               h4{
+                width: 100%;
                 font-size: 105%;
+                @include txt-hidden;
+                @extend %Roboto-light;
+                font-weight: bold;
+                @media screen and (min-width: 890px){
+                  @include no-txt-hidden;
+                }
               }
               p{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 85%;
+                width: 100%;
+                font-size: 85%;
+                @include txt-hidden;
+                @extend %Roboto-light;
                 @media screen and (min-width: 890px){
+                  @include no-txt-hidden;
                   width: 100%;
                 }
               }
@@ -241,8 +272,8 @@ main{
                 text-align: end;
                 width: 80px;
                 position: relative;
-                bottom: 18px;
-                left: 90%;
+                bottom: 14px;
+                left: 86%;
                 font-size: 90%;
                 color: $gris;
                 @media screen and (min-width: 890px){
@@ -250,7 +281,7 @@ main{
                   width: 100%;
                   left: 0;
                   bottom: 0;
-                  top: 40px;
+                  top: 25px;
                   font-size: 130%;
                 }
               }
