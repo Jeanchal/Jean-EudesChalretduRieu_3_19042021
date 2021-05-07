@@ -309,7 +309,8 @@ main{
         &__icons{
           @include flex-center;
           &__nouveau{
-            padding: 0 15px 0 15px;
+            text-align: center;
+            padding: 15px 10px 0 10px;
             height: 30px;
             width: 70px;
             position: relative;
@@ -320,9 +321,14 @@ main{
             border-radius: 5px;
             font-size: 110%;
             @extend %Roboto-regular;
+            @media screen and (min-width: 500px){
+              bottom: 210px;
+              left: 40px;
+              }
             @media screen and (min-width: 890px){
               width: 85px;
-          }
+              bottom: 240px;
+              }
       }
       &__coeur{
         font-size: 170%;
