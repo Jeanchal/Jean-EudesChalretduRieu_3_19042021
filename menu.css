@@ -1,3 +1,4 @@
+@import "regles.css";
 main #main section {
   max-width: 600px;
 }
@@ -72,12 +73,15 @@ main #main .commander {
   justify-content: center;
 }
 main #main .commander__bouton {
-  background-color: #9356DC;
+  font-size: 120%;
+  width: 130px;
+  padding: 20px 30px 20px 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
-  font-size: 110%;
+  font-weight: bold;
   border-radius: 30px;
-  padding: 15px 50px 15px 50px;
-  box-shadow: 1px 3px 5px 1px #eaeaea;
+  text-align: center;
+  box-shadow: 1px 5px 5px 2px #cacaca;
 }
 
 .main-titre {
@@ -119,6 +123,7 @@ main #main .commander__bouton {
   margin-right: 15px;
   font-size: 150%;
   color: #f6f6f6;
+  transition: color 0.8s;
   text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
 }
 @media screen and (min-width: 890px) {
@@ -129,6 +134,7 @@ main #main .commander__bouton {
 .main-titre__coeur:hover {
   text-shadow: initial;
   color: #9356DC;
+  transition: 0.8s;
 }
 
 .menu {
@@ -137,11 +143,6 @@ main #main .commander__bouton {
   flex-direction: column;
   align-items: center;
   font-size: 120%;
-}
-@media screen and (min-width: 890px) {
-  .menu {
-    font-size: 120%;
-  }
 }
 .menu__titre {
   text-align: start;
@@ -186,14 +187,17 @@ main #main .commander__bouton {
   font-size: 85%;
 }
 .menu .plat-conteneur {
+  -webkit-animation: opacity 2s linear;
+          animation: opacity 2s linear;
   display: flex;
   justify-content: space-between;
   background-color: white;
+  transition: background-color 0.8s;
   overflow: hidden;
   font-size: 90%;
   border-radius: 15px;
   margin: 0 15px 30px 15px;
-  box-shadow: 1px 3px 5px 1px #eaeaea;
+  box-shadow: 1px 5px 5px 2px #cacaca;
 }
 @media screen and (min-width: 890px) {
   .menu .plat-conteneur {
@@ -214,11 +218,9 @@ main #main .commander__bouton {
     margin: 0 15px 0 15px;
   }
 }
-.menu .plat-conteneur:hover {
-  background-color: #99E2D0;
-}
 .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
   left: 60%;
+  transition: 0.8s;
 }
 @media screen and (min-width: 500px) {
   .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
@@ -235,6 +237,15 @@ main #main .commander__bouton {
   .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
     top: 10px;
   }
+}
+.menu .plat-conteneur:hover .plat-conteneur__icon {
+  -webkit-animation: large 0.4s ease-in;
+          animation: large 0.4s ease-in;
+  background-color: #99E2D0;
+}
+.menu .plat-conteneur:hover .plat-conteneur__icon i {
+  -webkit-animation: rotate 0.4s ease-in;
+          animation: rotate 0.4s ease-in;
 }
 .menu .plat-conteneur__icon {
   display: flex;
@@ -370,6 +381,7 @@ main #main .commander__bouton {
   position: relative;
   bottom: 14px;
   left: 86%;
+  transition: Left 0.4s;
   font-size: 90%;
   color: #353535;
 }

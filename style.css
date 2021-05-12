@@ -1,3 +1,4 @@
+@import "regles.css";
 body {
   margin-left: auto;
   margin-right: auto;
@@ -7,7 +8,7 @@ footer #footer, .restaurant, .nav-section nav, .nav-section h3, .pre-header__log
   max-width: 600px;
 }
 
-.restaurant-block__txt__icons__nouveau, .nav-conteneur__block__num, .nav-conteneur__block h4, body ul, body h3 {
+.restaurant-block__txt__icons__nouveau, .nav-conteneur__block__num, .nav-conteneur__block h4, .header-explorer__bouton, body ul, body h3 {
   font-family: "Roboto-regular", Arial, Georgia, Verdana, Impact;
 }
 
@@ -153,12 +154,14 @@ header a, header a:hover, header a:active, header a:visited {
   margin-bottom: 25px;
 }
 .header-explorer__bouton {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 30px;
   margin-bottom: 25px;
-  padding: 15px 20px 15px 20px;
-  box-shadow: 1px 3px 5px 1px #eaeaea;
+  padding: 20px 30px 20px 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 1px 5px 5px 2px #cacaca;
 }
 
 .nav-section {
@@ -195,9 +198,10 @@ header a, header a:hover, header a:active, header a:visited {
   border-radius: 30px;
   width: 100%;
   background-color: #f6f6f6;
+  transition: background-color 0.5s;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 3px 5px 1px #eaeaea;
+  box-shadow: 1px 5px 5px 2px #cacaca;
 }
 @media screen and (min-width: 890px) {
   .nav-conteneur {
@@ -207,15 +211,17 @@ header a, header a:hover, header a:active, header a:visited {
 .nav-conteneur:hover {
   color: #9356DC;
   background-color: white;
+  transition: 0.5s;
 }
 .nav-conteneur__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 85%;
-  height: 85px;
+  height: 100px;
   border-radius: 30px;
   color: #7e7e7e;
+  transition: color 0.5s;
 }
 @media screen and (min-width: 400px) {
   .nav-conteneur__block {
@@ -241,6 +247,7 @@ header a, header a:hover, header a:active, header a:visited {
   }
 }
 .nav-conteneur__block h4 {
+  font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -259,6 +266,7 @@ header a, header a:hover, header a:active, header a:visited {
   color: #9356DC;
 }
 .nav-conteneur__block__num {
+  font-size: 80%;
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
@@ -285,7 +293,7 @@ header a, header a:hover, header a:active, header a:visited {
 }
 .nav-conteneur__block__icon {
   text-align: center;
-  font-size: 120%;
+  font-size: 110%;
   padding-right: 10px;
 }
 @media screen and (min-width: 890px) {
@@ -353,7 +361,7 @@ main a, main a:hover, main a:active, main a:visited {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 1px 3px 5px 1px #eaeaea;
+  box-shadow: 1px 5px 5px 2px #cacaca;
 }
 @media screen and (min-width: 890px) {
   .restaurant-block {
@@ -436,11 +444,13 @@ main a, main a:hover, main a:active, main a:visited {
 .restaurant-block__txt__icons__coeur {
   font-size: 170%;
   color: white;
+  transition: color 0.8s;
   text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
 }
 .restaurant-block__txt__icons__coeur:hover {
   text-shadow: initial;
   color: #9356DC;
+  transition: 0.8s;
 }
 
 footer {

@@ -18,3 +18,15 @@
     font-family: 'Shrikhand';
     src: url('base/Shrikhand-Regular.ttf') format('truetype');
 }
+@keyframes large{
+    0%{ transform: translate(100%, 0%);}
+    100%{ transform: translate(0%, 0%);}
+}
+@keyframes rotate{
+    0%{ transform: rotate(-2turn);}
+    100%{ transform: rotate(1);}
+}
+@keyframes opacity{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}

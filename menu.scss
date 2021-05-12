@@ -1,6 +1,7 @@
 @import "utils/variables.scss";
 @import "utils/mixins.scss";
 @import "utils/extensions.scss";
+@import "regles.css";
 
 header{
     height: 250px;
@@ -52,11 +53,9 @@ main{
           padding-bottom: 50px;
           @include flex-center;
           &__bouton{
-            background-color: $violet;
-            color: white;
-            font-size: 110%;
-            border-radius: 30px;
-            padding: 15px 50px 15px 50px;
+            font-size: 120%;
+            width: 130px;
+            @include couleur-btn;
             @include ombre;
           }
         }
@@ -89,6 +88,7 @@ main{
         margin-right: 15px;
         font-size: 150%;
         color: $beigeclair;
+        transition: color .8s;
         @include txt-ombre;
         @media screen and (min-width: 890px){
             font-size: 170%;
@@ -96,6 +96,7 @@ main{
         &:hover{
             text-shadow: initial;
             color: $violet;
+            transition: .8s;
           }
         }
 }
@@ -103,9 +104,6 @@ main{
     width: 100%;
     @include colonne-center;
     font-size: 120%;
-    @media screen and (min-width: 890px){
-      font-size: 120%;
-  }
     &__titre{
       text-align: start;
       font-size: 90%;
@@ -140,8 +138,10 @@ main{
             }
     }
     .plat-conteneur{
+        animation: opacity 2s linear;
         @include flex-between;
         background-color: white;
+        transition: background-color .8s;
         overflow: hidden;
         font-size: 90%;
         border-radius: 15px;
@@ -160,9 +160,9 @@ main{
           margin: 0 15px 0 15px;
         }
         &:hover{
-          background-color: $vertclair;
           .plat-conteneur__txt .gras{
             left: 60%;
+            transition: .8s;
             @media screen and (min-width: 500px){
               left: 70%;
           }
@@ -173,6 +173,13 @@ main{
             @media screen and (min-width: 1000px){
               top: 10px;
           }
+          }
+          .plat-conteneur__icon{
+            animation: large 0.4s ease-in;
+            background-color: $vertclair;
+          }
+          .plat-conteneur__icon i{
+            animation: rotate 0.4s ease-in;
           }
         }
         &__icon{
@@ -235,7 +242,7 @@ main{
           }
           &__txt{
             padding: 12px 0 0 12px;
-            background-color:white;
+            background-color: white;
             width: 100%;
             font-size: 105%;
               border-top-left-radius: 15px;
@@ -274,6 +281,7 @@ main{
                 position: relative;
                 bottom: 14px;
                 left: 86%;
+                transition: Left .4s;
                 font-size: 90%;
                 color: $gris;
                 @media screen and (min-width: 890px){
