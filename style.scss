@@ -3,6 +3,12 @@
 @import "utils/extensions.scss";
 @import "regles.css";
 
+@for $i from 1 through 5 {
+  .A#{$i} {
+    animation: opac ($i * 0.7s) ease-in;
+    }
+}
+
 body{
 margin-top: 0;
 margin-bottom: 0;
