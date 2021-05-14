@@ -4,273 +4,309 @@
 @import "regles.css";
 
 @for $i from 1 through 5 {
-  .A#{$i} {
+  .plat a:nth-child(#{$i}) {
     animation: opac ($i * 0.7s) ease-in;
-    }
+  }
 }
 
-body{
-margin-top: 0;
-margin-bottom: 0;
-max-width: 1450px;
-min-width: 300px;
-@extend %centrage-responsive;
-@media screen and (min-width: 890px){
-  font-size: 110%;
-}
-  a{
-  text-decoration: none;
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1450px;
+  min-width: 300px;
+  @extend %centrage-responsive;
+  @media screen and (min-width: 890px) {
+    font-size: 110%;
   }
-  p{ 
+  a {
+    text-decoration: none;
+  }
+  p {
     margin: 0;
     @extend %Roboto-light;
   }
-  h1{
+  h1 {
     @extend %Shrikland;
   }
-  h2{
+  h2 {
     @extend %Shrikland;
     font-size: 200%;
   }
-  h3{
+  h3 {
     @extend %Roboto-regular;
     margin-bottom: 5px;
   }
-  h4{ 
+  h4 {
     margin: 0;
     @extend %Roboto-light;
   }
-  ul{
+  ul {
     @extend %Roboto-regular;
     font-size: 85%;
   }
-  li{
+  li {
     margin-top: 10px;
     list-style-type: none;
     position: relative;
     right: 40px;
   }
-  figure{
-  position: relative;
-  margin: 0;
+  figure {
+    position: relative;
+    margin: 0;
   }
 }
-.pre-header{
+.loader{
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Shrikhand';
+  z-index: 11;
+  div{
+    height: 0.1px;
+    width: 100%;
+    transform: translate(0, -50px);
+    animation: loader-translate 2s linear;
+    span{
+      margin: 0 5px 10px 0;
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      border: 8px solid rgba(50, 50, 50, 0.4);
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        bottom: -8px;
+        right: -8px;
+        border-radius: 20px;
+        border: 8px solid transparent;
+        border-top-color: black;
+        animation: rotate 1s linear infinite;
+      }
+    }
+  }
+}
+.index-header {
   @include fixed;
   @include colonne;
   z-index: 10;
-  a, a:hover, a:active, a:visited{
+  a,
+  a:hover,
+  a:active,
+  a:visited {
     color: black;
-    }
-    &--size{
-      height: 70px;
-      box-shadow: -2px 3px 5px 0px gray;
-      background-color: white;
-      z-index: 1;
-      @include flex-center;
-    }
-    &__figure{
-      @include flex-center;
-    }
-    &__arrow{
-      color: $gris;
-      position: relative;
-      left: 30px;
-      z-index: 11;
-      font-size: 140%;
-      }
-      &__logoposition{
-      position: relative;
-      width: 100%;
-      @extend %max600;
-      @include flex-center;
-      @media screen and (min-width: 890px){
-          max-width: 850px;
-      }
-      }
   }
-header{
-  font-size: 120%;
-  z-index: 8;
-  a, a:hover, a:active, a:visited{
-  color: black;
+  &--size {
+    height: 70px;
+    animation: loader-size 2s linear;
+    box-shadow: -2px 3px 5px 0px gray;
+    background-color: white;
+    z-index: 1;
+    @include flex-center;
+  }
+  &__figure {
+    @include flex-center;
+    img{
+      animation: loader-opac 2s linear;
+    }
   }
 }
-.header-section{
-&__localisation{
+main{
+  z-index: 9;
+}
+.header--index {
+  font-size: 120%;
+  z-index: 8;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: black;
+  }
+}
+.header-section {
+  &__localisation {
     @include flex-center;
     background-color: $beige;
     width: 100%;
     color: $gris;
     @include padding-hb;
+  }
 }
-}
-.header-explorer{
+.header-explorer {
   background-color: $beigeclair;
   width: 100%;
   @include colonne-center;
   @include padding-hb;
-    h3{
-      text-align: center;
-      width: 60%;
-    }
-      &__paragraphe{
-          width: 80%;
-          color: $gris;
-          text-align: center;
-          margin-bottom: 25px;
-      }
-      &__bouton{
-          margin-bottom: 25px;
-          @include couleur-btn;
-          @include ombre;
-          @extend %Roboto-regular;
-      }
+  h3 {
+    text-align: center;
+    width: 60%;
+  }
+  &__paragraphe {
+    width: 80%;
+    color: $gris;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__bouton {
+    margin-bottom: 25px;
+    @include couleur-btn;
+    @include ombre;
+    @extend %Roboto-regular;
+  }
 }
-.nav-section{
+.nav-section {
   width: 100%;
   @include colonne-center;
   @include margin-hb;
-      h3{
-          width: 90%;
-          @extend %max600;
-          @media screen and (min-width: 890px){
-            max-width: initial;
-          }
-      }
-      nav{
-      width: 90%;
-      margin-left: 12px;
-      @extend %max600;
-      @include colonne-center;
-      @media screen and (min-width: 890px){
-        flex-direction: initial;
-        max-width: initial;
-      }
-      }
+  h3 {
+    width: 90%;
+    @extend %max600;
+    @media screen and (min-width: 890px) {
+      max-width: initial;
+    }
+  }
+  nav {
+    width: 90%;
+    margin-left: 12px;
+    @extend %max600;
+    @include colonne-center;
+    @media screen and (min-width: 890px) {
+      flex-direction: initial;
+      max-width: initial;
+    }
+  }
 }
-.nav-conteneur{
+.nav-conteneur {
   border-radius: 30px;
   width: 100%;
   background-color: $beigeclair;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   @include margin-hb;
   @include ombre;
-  @media screen and (min-width: 890px){
-  margin-right: 25px;
+  @media screen and (min-width: 890px) {
+    margin-right: 25px;
   }
-  &:hover{
+  &:hover {
     color: $violet;
     background-color: white;
-    transition: .5s;
+    transition: 0.5s;
   }
-  &__block{
-      @include flex-between;
-      align-items: center;
+  &__block {
+    @include flex-between;
+    align-items: center;
+    width: 85%;
+    height: 100px;
+    border-radius: 30px;
+    color: $grisclair;
+    transition: color 0.5s;
+    @media screen and (min-width: 400px) {
       width: 85%;
+      font-size: 130%;
+    }
+    @media screen and (min-width: 890px) {
       height: 100px;
+      width: 100%;
+      font-size: 90%;
+    }
+    @media screen and (min-width: 1000px) {
+      font-size: 110%;
+    }
+    @media screen and (min-width: 1290px) {
+      font-size: 130%;
+    }
+    h4 {
+      @extend %Roboto-regular;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      @media screen and (min-width: 890px) {
+        position: relative;
+        right: 20px;
+      }
+      @media screen and (min-width: 1200px) {
+        right: 40px;
+      }
+    }
+    &:hover {
+      color: $violet;
+    }
+    &__num {
+      font-size: 80%;
+      background-color: $violet;
+      color: white;
       border-radius: 30px;
-      color: $grisclair;
-      transition: color .5s;
-      @media screen and (min-width: 400px){
-        width: 85%;
-        font-size: 130%;
-      }
-      @media screen and (min-width: 890px){
-        height: 100px;
-        width: 100%;
-        font-size: 90%;
-      }
-      @media screen and (min-width: 1000px){
-        font-size: 110%;
-      }
-      @media screen and (min-width: 1290px){
-        font-size: 130%;
-      }
-      h4{
-        @extend %Roboto-regular;
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        @media screen and (min-width: 890px){
-          position: relative;
-          right: 20px;
-        }
-        @media screen and (min-width: 1200px){
-          right: 40px;
+      position: relative;
+      right: 15px;
+      padding: 5px 12px 5px 12px;
+      @extend %Roboto-regular;
+      @include flex-center;
+      @media screen and (min-width: 890px) {
+        position: relative;
+        left: 42%;
+        top: 50px;
+        font-size: 140%;
+        padding: 7px 15px 7px 15px;
+        @media screen and (min-width: 1000px) {
+          padding: 7px 18px 7px 18px;
         }
       }
-      &:hover{
-        color: $violet;
+    }
+    &__icon {
+      text-align: center;
+      font-size: 110%;
+      padding-right: 10px;
+      @media screen and (min-width: 890px) {
+        font-size: 140%;
+        position: relative;
+        right: 30px;
       }
-      &__num{
-          font-size: 80%;
-          background-color: $violet;
-          color: white;
-          border-radius: 30px;
-          position: relative;
-          right: 15px;
-          padding: 5px 12px 5px 12px;
-          @extend %Roboto-regular;
-          @include flex-center;
-          @media screen and (min-width: 890px){
-            position: relative;
-            left: 42%;
-            top: 50px;
-            font-size: 140%;
-            padding: 7px 15px 7px 15px;
-            @media screen and (min-width: 1000px){
-              padding: 7px 18px 7px 18px;
-            }
-          }
-          }
-      &__icon{
-        text-align: center;
-        font-size: 110%;
-        padding-right: 10px;
-        @media screen and (min-width: 890px){
-          font-size: 140%;
-          position: relative;
-          right: 30px;
-        }
-      }
-      h4{
-        font-size: 85%;
-        color: black;
-      }
-      }
+    }
+    h4 {
+      font-size: 85%;
+      color: black;
+    }
+  }
 }
-main{
-  z-index: 9;
+.restaurant-general-conteneur {
   background-color: $beigeclair;
   @include colonne-center;
-  @media screen and (min-width: 890px){
+  @media screen and (min-width: 890px) {
     margin-top: 60px;
   }
-  a, a:hover, a:active, a:visited{
-  color: black;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: black;
   }
 }
-.restaurant{
+.restaurant {
   width: 90%;
   @include colonne-center;
   @include padding-hb;
   @extend %max600;
-  @media screen and (min-width: 890px){
-  max-width: initial;
-}
-  h3{
-      width: 100%;
-      font-size: 150%;
-      }
-  &-conteneur{
-      width: 100%;
-      @media screen and (min-width: 890px){
-        @include flex-between;
-        flex-wrap: wrap;
+  @media screen and (min-width: 890px) {
+    max-width: initial;
+  }
+  h3 {
+    width: 100%;
+    font-size: 150%;
+  }
+  &-conteneur {
+    width: 100%;
+    @media screen and (min-width: 890px) {
+      @include flex-between;
+      flex-wrap: wrap;
     }
   }
-  &-block{
+  &-block {
     border-radius: 20px;
     background-color: white;
     width: 100%;
@@ -278,110 +314,113 @@ main{
     @include colonne-center;
     @include margin-hb;
     @include ombre;
-    @media screen and (min-width: 890px){
+    @media screen and (min-width: 890px) {
       margin-right: 20px;
       width: 46%;
+    }
+    &__figure {
+      width: 600px;
+      height: 170px;
+      @media screen and (min-width: 500px) {
+        height: 200px;
       }
-            &__figure{
-            width: 600px;
-            height: 170px;
-            @media screen and (min-width: 500px){
-              height: 200px;
-              }
-              @media screen and (min-width: 890px){
-                height: 230px;
-                }
-                &__image{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                }
-            }
-        &__txt{
-        @include flex-between;
-        width: 90%;
-        height: 40px;
-        padding-right: 10px;
-        @include margin-hb;
-        h4{
-          @extend %Roboto-gras;
-          min-width: 140px;
-        }
-        p{
-          padding-top: 5px;
-        }
-        &__icons{
-          @include flex-center;
-          &__nouveau{
-            text-align: center;
-            padding: 15px 10px 0 10px;
-            height: 30px;
-            width: 70px;
-            position: relative;
-            bottom: 180px;
-            left: 30px;
-            color: $vert;
-            background-color: $vertclair;
-            border-radius: 5px;
-            font-size: 110%;
-            @extend %Roboto-regular;
-            @media screen and (min-width: 500px){
-              bottom: 210px;
-              left: 40px;
-              }
-            @media screen and (min-width: 890px){
-              width: 85px;
-              bottom: 240px;
-              }
+      @media screen and (min-width: 890px) {
+        height: 230px;
       }
-      &__coeur{
-        font-size: 170%;
-        color: white;
-        transition: color .8s;
-        @include txt-ombre;
-        &:hover{
-          text-shadow: initial;
-          color: $violet;
-          transition: .8s;
-        }
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
+    }
+    &__txt {
+      @include flex-between;
+      width: 90%;
+      height: 40px;
+      padding-right: 10px;
+      @include margin-hb;
+      h4 {
+        @extend %Roboto-gras;
+        min-width: 140px;
       }
+      p {
+        padding-top: 5px;
+      }
+      &__icons {
+        @include flex-center;
+        &__nouveau {
+          text-align: center;
+          padding: 15px 10px 0 10px;
+          height: 30px;
+          width: 70px;
+          position: relative;
+          bottom: 180px;
+          left: 30px;
+          color: $vert;
+          background-color: $vertclair;
+          border-radius: 5px;
+          font-size: 110%;
+          @extend %Roboto-regular;
+          @media screen and (min-width: 500px) {
+            bottom: 210px;
+            left: 40px;
           }
+          @media screen and (min-width: 890px) {
+            width: 85px;
+            bottom: 240px;
+          }
+        }
+        &__coeur {
+          font-size: 170%;
+          color: white;
+          transition: color 0.8s;
+          @include txt-ombre;
+          &:hover {
+            text-shadow: initial;
+            color: $violet;
+            transition: 0.8s;
+          }
+        }
+      }
     }
   }
-footer{
+}
+footer {
   font-size: 120%;
   z-index: 7;
   @include colonne-center;
   background-color: $gris;
   color: white;
-    a, a:hover, a:active, a:visited{
-        color: white;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: white;
   }
-  #footer{
-      width: 90%;
-      padding-bottom: 30px;
-      padding-top: 10px;
-      @extend %max600;
-      @include colonne-center;
-      @media screen and (min-width: 890px){
-        max-width: initial;
+  #footer {
+    width: 90%;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    @extend %max600;
+    @include colonne-center;
+    @media screen and (min-width: 890px) {
+      max-width: initial;
+    }
+    section {
+      width: 100%;
+      h3 {
+        @extend %Shrikland-light;
       }
-      section{
-        width: 100%;
-        h3{
-          @extend %Shrikland-light;
-        }
-        ul span{
-          font-size: 80%;
-          margin-right: 10px;
-        }
+      ul span {
+        font-size: 80%;
+        margin-right: 10px;
+      }
     }
   }
 }

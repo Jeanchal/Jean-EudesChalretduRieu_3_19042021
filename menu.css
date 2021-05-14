@@ -1,5 +1,5 @@
 @import "regles.css";
-main #main section {
+main #main section, .pre-header__logoposition {
   max-width: 600px;
 }
 
@@ -7,15 +7,14 @@ main #main .commander {
   font-family: "Roboto-regular", Arial, Georgia, Verdana, Impact;
 }
 
-.menu .plat-conteneur__txt p, .menu .plat-conteneur__txt h4, .menu__titre h3 {
+.main-menu .menu .plat-conteneur__txt p, .main-menu .menu .plat-conteneur__txt h4, .main-menu .menu__titre h3 {
   font-family: "Roboto-light", Arial, Georgia, Verdana, Impact;
   font-weight: lighter;
 }
 
-header {
+.header {
   height: 250px;
 }
-
 .header--lapalettedugout {
   background: no-repeat url(base/images/lapalettedugout.jpg);
   background-size: cover;
@@ -31,6 +30,53 @@ header {
 .header--ledelicedessens {
   background: no-repeat url(base/images/ledelicedessens.jpg);
   background-size: cover;
+}
+
+.pre-header {
+  position: sticky;
+  top: 0.1px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.pre-header a,
+.pre-header a:hover,
+.pre-header a:active,
+.pre-header a:visited {
+  color: black;
+}
+.pre-header--size {
+  height: 70px;
+  box-shadow: -2px 3px 5px 0px gray;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pre-header__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pre-header__arrow {
+  color: #353535;
+  position: relative;
+  left: 30px;
+  z-index: 11;
+  font-size: 140%;
+}
+.pre-header__logoposition {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 890px) {
+  .pre-header__logoposition {
+    max-width: 850px;
+  }
 }
 
 main #main {
@@ -137,7 +183,10 @@ main #main .commander__bouton {
   transition: 0.8s;
 }
 
-.menu {
+.main-menu {
+  width: 100%;
+}
+.main-menu .menu {
   opacity: 1;
   width: 100%;
   display: flex;
@@ -145,60 +194,62 @@ main #main .commander__bouton {
   align-items: center;
   font-size: 120%;
 }
-.menu__titre {
+.main-menu .menu__titre {
   text-align: start;
   font-size: 90%;
   width: 90%;
   padding-bottom: 10px;
 }
 @media screen and (min-width: 890px) {
-  .menu__titre {
+  .main-menu .menu__titre {
     padding-left: 7%;
   }
 }
-.menu__titre h3 {
+.main-menu .menu__titre h3 {
   width: 55px;
   padding-bottom: 5px;
   border-bottom: 4px solid #99E2D0;
 }
 @media screen and (min-width: 890px) {
-  .menu__titre h3 {
+  .main-menu .menu__titre h3 {
     font-size: 100%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu__titre h3 {
+  .main-menu .menu__titre h3 {
     padding: 10px 0 5px 0;
     font-size: 120%;
   }
 }
-.menu .plat {
+.main-menu .menu .plat {
   width: 100%;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat {
+  .main-menu .menu .plat {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
   }
 }
-.menu .plat p {
+.main-menu .menu .plat p {
   margin-top: 5px;
   font-size: 85%;
 }
-.menu .plat-conteneur {
+.main-menu .menu .plat-conteneur {
   display: flex;
   justify-content: space-between;
+  color: black;
   background-color: white;
   overflow: hidden;
   font-size: 90%;
+  width: 90%;
   border-radius: 15px;
   margin: 0 15px 30px 15px;
   box-shadow: 1px 5px 5px 2px #cacaca;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur {
+  .main-menu .menu .plat-conteneur {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -207,46 +258,46 @@ main #main .commander__bouton {
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu .plat-conteneur {
+  .main-menu .menu .plat-conteneur {
     margin: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 1500px) {
-  .menu .plat-conteneur {
+  .main-menu .menu .plat-conteneur {
     margin: 0 15px 0 15px;
   }
 }
-.menu .plat-conteneur:hover .plat-conteneur__txt .gras {
+.main-menu .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
   transform: translate(-100%);
   transition: 0.4s;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
+  .main-menu .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
     transform: translate(0, -100%);
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
+  .main-menu .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
     transform: translate(0, -70%);
   }
 }
-.menu .plat-conteneur:hover .plat-conteneur__icon {
-  -webkit-animation: icon 0.4s ease-in;
-          animation: icon 0.4s ease-in;
+.main-menu .menu .plat-conteneur:hover .plat-conteneur__icon {
   opacity: 1;
+  transform: translate(0%, 0%) scale(1, 1);
 }
-.menu .plat-conteneur:hover .plat-conteneur__icon i {
+.main-menu .menu .plat-conteneur:hover .plat-conteneur__icon i {
   -webkit-animation: rotate 0.5s ease-in;
           animation: rotate 0.5s ease-in;
 }
-.menu .plat-conteneur__icon {
+.main-menu .menu .plat-conteneur__icon {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #99E2D0;
-  -webkit-animation: icon-return 0.4s ease-in-out;
-          animation: icon-return 0.4s ease-in-out;
+  transform: translate(100%, 0%) scale(0, 1);
   opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transition-property: transform, opacity;
   text-align: center;
   padding-top: 25px;
   width: 70px;
@@ -254,7 +305,7 @@ main #main .commander__bouton {
   color: white;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur__icon {
+  .main-menu .menu .plat-conteneur__icon {
     height: 50px;
     padding-top: 9px;
     font-size: 250%;
@@ -262,12 +313,12 @@ main #main .commander__bouton {
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu .plat-conteneur__icon {
+  .main-menu .menu .plat-conteneur__icon {
     padding-top: 12px;
   }
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur--4elements {
+  .main-menu .menu .plat-conteneur--4elements {
     width: 204px;
     height: 130px;
     font-size: 65%;
@@ -277,26 +328,26 @@ main #main .commander__bouton {
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu .plat-conteneur--4elements {
+  .main-menu .menu .plat-conteneur--4elements {
     width: 226px;
     height: 160px;
     font-size: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu .plat-conteneur--4elements {
+  .main-menu .menu .plat-conteneur--4elements {
     width: 275px;
     height: 170px;
     font-size: 85%;
   }
 }
 @media screen and (min-width: 1500px) {
-  .menu .plat-conteneur--4elements {
+  .main-menu .menu .plat-conteneur--4elements {
     width: 305px;
   }
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur--3elements {
+  .main-menu .menu .plat-conteneur--3elements {
     width: 275px;
     height: 130px;
     font-size: 65%;
@@ -306,25 +357,25 @@ main #main .commander__bouton {
   }
 }
 @media screen and (min-width: 1000px) {
-  .menu .plat-conteneur--3elements {
+  .main-menu .menu .plat-conteneur--3elements {
     width: 308px;
     height: 160px;
     font-size: 75%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .menu .plat-conteneur--3elements {
+  .main-menu .menu .plat-conteneur--3elements {
     width: 375px;
     height: 170px;
     font-size: 85%;
   }
 }
 @media screen and (min-width: 1500px) {
-  .menu .plat-conteneur--3elements {
+  .main-menu .menu .plat-conteneur--3elements {
     width: 420px;
   }
 }
-.menu .plat-conteneur__txt {
+.main-menu .menu .plat-conteneur__txt {
   padding: 12px 0 0 12px;
   background-color: white;
   width: 100%;
@@ -333,7 +384,7 @@ main #main .commander__bouton {
   border-bottom-left-radius: 15px;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur__txt {
+  .main-menu .menu .plat-conteneur__txt {
     width: 97.5%;
     border-bottom-left-radius: 0;
     border-top-right-radius: 15px;
@@ -342,7 +393,7 @@ main #main .commander__bouton {
     padding: 20px 7px 5px 7px;
   }
 }
-.menu .plat-conteneur__txt h4 {
+.main-menu .menu .plat-conteneur__txt h4 {
   width: 100%;
   font-size: 105%;
   white-space: nowrap;
@@ -351,13 +402,13 @@ main #main .commander__bouton {
   font-weight: bold;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur__txt h4 {
+  .main-menu .menu .plat-conteneur__txt h4 {
     white-space: initial;
     overflow: initial;
     text-overflow: initial;
   }
 }
-.menu .plat-conteneur__txt p {
+.main-menu .menu .plat-conteneur__txt p {
   width: 100%;
   font-size: 85%;
   white-space: nowrap;
@@ -365,14 +416,14 @@ main #main .commander__bouton {
   text-overflow: ellipsis;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur__txt p {
+  .main-menu .menu .plat-conteneur__txt p {
     white-space: initial;
     overflow: initial;
     text-overflow: initial;
     width: 100%;
   }
 }
-.menu .plat-conteneur__txt .gras {
+.main-menu .menu .plat-conteneur__txt .gras {
   text-align: end;
   width: 80px;
   position: relative;
@@ -383,7 +434,7 @@ main #main .commander__bouton {
   transition: 0.4s;
 }
 @media screen and (min-width: 890px) {
-  .menu .plat-conteneur__txt .gras {
+  .main-menu .menu .plat-conteneur__txt .gras {
     text-align: center;
     width: 100%;
     left: 0;

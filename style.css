@@ -4,7 +4,7 @@ body {
   margin-right: auto;
 }
 
-footer #footer, .restaurant, .nav-section nav, .nav-section h3, .pre-header__logoposition {
+footer #footer, .restaurant, .nav-section nav, .nav-section h3 {
   max-width: 600px;
 }
 
@@ -31,27 +31,27 @@ footer #footer section h3 {
   font-weight: lighter;
 }
 
-.A1 {
+.plat a:nth-child(1) {
   -webkit-animation: opac 0.7s ease-in;
           animation: opac 0.7s ease-in;
 }
 
-.A2 {
+.plat a:nth-child(2) {
   -webkit-animation: opac 1.4s ease-in;
           animation: opac 1.4s ease-in;
 }
 
-.A3 {
+.plat a:nth-child(3) {
   -webkit-animation: opac 2.1s ease-in;
           animation: opac 2.1s ease-in;
 }
 
-.A4 {
+.plat a:nth-child(4) {
   -webkit-animation: opac 2.8s ease-in;
           animation: opac 2.8s ease-in;
 }
 
-.A5 {
+.plat a:nth-child(5) {
   -webkit-animation: opac 3.5s ease-in;
           animation: opac 3.5s ease-in;
 }
@@ -96,18 +96,63 @@ body figure {
   margin: 0;
 }
 
-.pre-header {
+.loader {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  font-family: "Shrikhand";
+  z-index: 11;
+}
+.loader div {
+  height: 0.1px;
+  width: 100%;
+  transform: translate(0, -50px);
+  -webkit-animation: loader-translate 2s linear;
+          animation: loader-translate 2s linear;
+}
+.loader div span {
+  margin: 0 5px 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 8px solid rgba(50, 50, 50, 0.4);
+  position: relative;
+}
+.loader div span:after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  bottom: -8px;
+  right: -8px;
+  border-radius: 20px;
+  border: 8px solid transparent;
+  border-top-color: black;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+}
+
+.index-header {
   position: sticky;
   top: 0.1px;
   display: flex;
   flex-direction: column;
   z-index: 10;
 }
-.pre-header a, .pre-header a:hover, .pre-header a:active, .pre-header a:visited {
+.index-header a,
+.index-header a:hover,
+.index-header a:active,
+.index-header a:visited {
   color: black;
 }
-.pre-header--size {
+.index-header--size {
   height: 70px;
+  -webkit-animation: loader-size 2s linear;
+          animation: loader-size 2s linear;
   box-shadow: -2px 3px 5px 0px gray;
   background-color: white;
   z-index: 1;
@@ -115,36 +160,28 @@ body figure {
   align-items: center;
   justify-content: center;
 }
-.pre-header__figure {
+.index-header__figure {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.pre-header__arrow {
-  color: #353535;
-  position: relative;
-  left: 30px;
-  z-index: 11;
-  font-size: 140%;
-}
-.pre-header__logoposition {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (min-width: 890px) {
-  .pre-header__logoposition {
-    max-width: 850px;
-  }
+.index-header__figure img {
+  -webkit-animation: loader-opac 2s linear;
+          animation: loader-opac 2s linear;
 }
 
-header {
+main {
+  z-index: 9;
+}
+
+.header--index {
   font-size: 120%;
   z-index: 8;
 }
-header a, header a:hover, header a:active, header a:visited {
+.header--index a,
+.header--index a:hover,
+.header--index a:active,
+.header--index a:visited {
   color: black;
 }
 
@@ -333,19 +370,21 @@ header a, header a:hover, header a:active, header a:visited {
   color: black;
 }
 
-main {
-  z-index: 9;
+.restaurant-general-conteneur {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media screen and (min-width: 890px) {
-  main {
+  .restaurant-general-conteneur {
     margin-top: 60px;
   }
 }
-main a, main a:hover, main a:active, main a:visited {
+.restaurant-general-conteneur a,
+.restaurant-general-conteneur a:hover,
+.restaurant-general-conteneur a:active,
+.restaurant-general-conteneur a:visited {
   color: black;
 }
 
@@ -487,7 +526,10 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer a, footer a:hover, footer a:active, footer a:visited {
+footer a,
+footer a:hover,
+footer a:active,
+footer a:visited {
   color: white;
 }
 footer #footer {

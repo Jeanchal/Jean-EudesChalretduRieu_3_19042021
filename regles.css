@@ -18,19 +18,27 @@
     font-family: 'Shrikhand';
     src: url('base/Shrikhand-Regular.ttf') format('truetype');
 }
-@keyframes icon{
-    0%{ opacity: 0; transform: translate(100%, 0%) scale(0, 1);}
-    100%{ opacity: 1; transform: translate(0%, 0%) scale(1, 1);}
-}
-@keyframes icon-return{
-    0%{ opacity: 1; transform: translate(0%, 0%) scale(1, 1);}
-    100%{ opacity: 0; transform: translate(100%, 0%) scale(0, 1);}
-}
 @keyframes opac{
     0%{ opacity: 0;}
+    60%{ opacity: 0.5;}
     100%{ opacity: 1;}
 }
 @keyframes rotate{
-    0%{ transform: rotate(-1turn);}
-    100%{ transform: rotate(1);}
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+@keyframes loader-size{
+    0%{ transform: scale(1, 18);}
+    99.99%{ transform: scale(1, 18);}
+    100%{ transform: scale(1, 1);}
+}
+@keyframes loader-opac{
+    0%{ opacity: 0;}
+    99.99%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+@keyframes loader-translate{
+    0%{ transform: translate(0, 250px);}
+    99.99%{ transform: translate(0, 250px);}
+    100%{ transform: translate(0, -100px);}
 }

@@ -3,29 +3,64 @@
 @import "utils/extensions.scss";
 @import "regles.css";
 
-header{
-    height: 250px;
-}
-.header{
-    &--lapalettedugout{
+.header {
+  height: 250px;
+  &--lapalettedugout {
     background: no-repeat url(base/images/lapalettedugout.jpg);
     background-size: cover;
-    }
-    &--lanoteenchantee{
+  }
+  &--lanoteenchantee {
     background: no-repeat url(base/images/lanoteenchantee.jpg);
     background-size: cover;
-    }
-    &--alafrancaise{
+  }
+  &--alafrancaise {
     background: no-repeat url(base/images/alafrancaise.jpg);
     background-size: cover;
-    }
-    &--ledelicedessens{
+  }
+  &--ledelicedessens {
     background: no-repeat url(base/images/ledelicedessens.jpg);
     background-size: cover;
-    }
+  }
 }
-main{
-    #main{
+.pre-header {
+  @include fixed;
+  @include colonne;
+  z-index: 10;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: black;
+  }
+  &--size {
+    height: 70px;
+    box-shadow: -2px 3px 5px 0px gray;
+    background-color: white;
+    z-index: 1;
+    @include flex-center;
+  }
+  &__figure {
+    @include flex-center;
+  }
+  &__arrow {
+    color: $gris;
+    position: relative;
+    left: 30px;
+    z-index: 11;
+    font-size: 140%;
+  }
+  &__logoposition {
+    position: relative;
+    width: 100%;
+    @extend %max600;
+    @include flex-center;
+    @media screen and (min-width: 890px) {
+      max-width: 850px;
+    }
+  }
+}
+main {
+  #main {
     font-size: 78%;
     background-color: $beigeclair;
     @include flex-center;
@@ -33,266 +68,272 @@ main{
     position: relative;
     bottom: 40px;
     @include topradius;
-        section{
+    section {
+      width: 100%;
+      @include colonne-center;
+      @include topradius;
+      @extend %max600;
+      background-color: $beigeclair;
+      @media screen and (min-width: 450px) {
+        font-size: 110%;
+      }
+      @media screen and (min-width: 890px) {
+        max-width: initial;
         width: 100%;
-        @include colonne-center;
-        @include topradius;
-        @extend %max600;
-        background-color: $beigeclair;
-        @media screen and (min-width: 450px){
-          font-size: 110%;
-        }
-        @media screen and (min-width: 890px){
-            max-width: initial;
-            width: 100%;
-          }
-        }
-        .commander{
-          @extend %Roboto-regular;
-          padding-top: 30px;
-          padding-bottom: 50px;
-          @include flex-center;
-          &__bouton{
-            font-size: 120%;
-            width: 130px;
-            @include couleur-btn;
-            @include ombre;
-          }
-        }
+      }
     }
+    .commander {
+      @extend %Roboto-regular;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      @include flex-center;
+      &__bouton {
+        font-size: 120%;
+        width: 130px;
+        @include couleur-btn;
+        @include ombre;
+      }
+    }
+  }
 }
-.main-titre{
-    align-items: center;
-    width: 90%;
-    margin-top: 10px;
-    @include flex-between;
-    @media screen and (min-width: 350px){
-        justify-content: flex-start;
-      }
-      @media screen and (min-width: 890px){
-        width: 85%;
-      }
-      h2{
-        font-weight: lighter;
-        font-size: 207%;
-        margin-right: 5px;
-        @include txt-hidden;
-        @media screen and (min-width: 350px){
-            margin-right: 40px;
-          }
-          @media screen and (min-width: 1000px){
-            font-size: 250%;
-          }
-      }
-         &__coeur{
-        margin-right: 15px;
-        font-size: 150%;
-        color: $beigeclair;
-        transition: color .8s;
-        @include txt-ombre;
-        @media screen and (min-width: 890px){
-            font-size: 170%;
-          }
-        &:hover{
-            text-shadow: initial;
-            color: $violet;
-            transition: .8s;
-          }
-        }
+.main-titre {
+  align-items: center;
+  width: 90%;
+  margin-top: 10px;
+  @include flex-between;
+  @media screen and (min-width: 350px) {
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: 890px) {
+    width: 85%;
+  }
+  h2 {
+    font-weight: lighter;
+    font-size: 207%;
+    margin-right: 5px;
+    @include txt-hidden;
+    @media screen and (min-width: 350px) {
+      margin-right: 40px;
+    }
+    @media screen and (min-width: 1000px) {
+      font-size: 250%;
+    }
+  }
+  &__coeur {
+    margin-right: 15px;
+    font-size: 150%;
+    color: $beigeclair;
+    transition: color 0.8s;
+    @include txt-ombre;
+    @media screen and (min-width: 890px) {
+      font-size: 170%;
+    }
+    &:hover {
+      text-shadow: initial;
+      color: $violet;
+      transition: 0.8s;
+    }
+  }
 }
-.menu{
+.main-menu {
+  width: 100%;
+  .menu {
     opacity: 1;
     width: 100%;
     @include colonne-center;
     font-size: 120%;
-    &__titre{
+    &__titre {
       text-align: start;
       font-size: 90%;
       width: 90%;
       padding-bottom: 10px;
-      @media screen and (min-width: 890px){
-          padding-left: 7%;
+      @media screen and (min-width: 890px) {
+        padding-left: 7%;
       }
-      h3{
+      h3 {
         @extend %Roboto-light;
         width: 55px;
         padding-bottom: 5px;
         border-bottom: 4px solid $vertclair;
-        @media screen and (min-width: 890px){
+        @media screen and (min-width: 890px) {
           font-size: 100%;
         }
-        @media screen and (min-width: 1000px){
+        @media screen and (min-width: 1000px) {
           padding: 10px 0 5px 0;
           font-size: 120%;
         }
       }
     }
-    .plat{
-        width: 100%;
-        @media screen and (min-width: 890px){
-            @include flex-center;
-            flex-wrap: nowrap;
-            }
-            p{
-                margin-top: 5px;
-                font-size: 85%;
-            }
+    .plat {
+      width: 100%;
+      @media screen and (min-width: 890px) {
+        @include flex-center;
+        flex-wrap: nowrap;
+      }
+      p {
+        margin-top: 5px;
+        font-size: 85%;
+      }
     }
-    .plat-conteneur{
-        @include flex-between;
-        background-color: white;
-        overflow: hidden;
-        font-size: 90%;
-        border-radius: 15px;
-        margin: 0 15px 30px 15px;
-        @include ombre;
-        @media screen and (min-width: 890px){
-          @include colonne;
-          text-align: center;
-          justify-content: initial;
-          margin: 0 7px 0 7px;
-        }
-        @media screen and (min-width: 1000px){
-          margin: 0 10px 0 10px;
-        }
-        @media screen and (min-width: 1500px){
-          margin: 0 15px 0 15px;
-        }
-        &:hover{
-          .plat-conteneur__txt .gras{
-            transform: translate(-100%);
-            transition: .4s;
-              @media screen and (min-width: 890px){
-                transform: translate(0, -100%);
-            }
-            @media screen and (min-width: 1000px){
-              transform: translate(0, -70%);
+    .plat-conteneur {
+      @include flex-between;
+      color: black;
+      background-color: white;
+      overflow: hidden;
+      font-size: 90%;
+      width: 90%;
+      border-radius: 15px;
+      margin: 0 15px 30px 15px;
+      @include ombre;
+      @media screen and (min-width: 890px) {
+        @include colonne;
+        text-align: center;
+        justify-content: initial;
+        margin: 0 7px 0 7px;
+      }
+      @media screen and (min-width: 1000px) {
+        margin: 0 10px 0 10px;
+      }
+      @media screen and (min-width: 1500px) {
+        margin: 0 15px 0 15px;
+      }
+      &:hover {
+        .plat-conteneur__txt .gras {
+          transform: translate(-100%);
+          transition: 0.4s;
+          @media screen and (min-width: 890px) {
+            transform: translate(0, -100%);
           }
-          }
-          .plat-conteneur__icon{
-            animation: icon 0.4s ease-in;
-            opacity: 1;
-          }
-          .plat-conteneur__icon i{
-            animation: rotate 0.5s ease-in;
+          @media screen and (min-width: 1000px) {
+            transform: translate(0, -70%);
           }
         }
-        &__icon{
+        .plat-conteneur__icon {
+          opacity: 1;
+          transform: translate(0%, 0%) scale(1, 1);
+        }
+        .plat-conteneur__icon i {
+          animation: rotate 0.5s ease-in;
+        }
+      }
+      &__icon {
+        @include colonne-center;
+        background-color: $vertclair;
+        transform: translate(100%, 0%) scale(0, 1);
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        transition-property: transform, opacity;
+        text-align: center;
+        padding-top: 25px;
+        width: 70px;
+        font-size: 140%;
+        color: white;
+        @media screen and (min-width: 890px) {
+          height: 50px;
+          padding-top: 9px;
+          font-size: 250%;
+          width: 100%;
+        }
+        @media screen and (min-width: 1000px) {
+          padding-top: 12px;
+        }
+      }
+      &--4elements {
+        @media screen and (min-width: 890px) {
+          width: 204px;
+          height: 130px;
+          font-size: 65%;
           @include colonne-center;
-          background-color: $vertclair;
-          animation: icon-return .4s ease-in-out;
-          opacity: 0;
-            text-align: center;
-            padding-top: 25px;
-            width: 70px;
-            font-size: 140%;
-            color:white;
-            @media screen and (min-width: 890px){
-              height: 50px;
-              padding-top: 9px;
-              font-size: 250%;
-              width: 100%;
-          }
-          @media screen and (min-width: 1000px){
-            padding-top: 12px;
         }
-         }
-         &--4elements{
-          @media screen and (min-width: 890px){
-              width: 204px;
-              height: 130px;
-              font-size: 65%;
-              @include colonne-center;
-            }
-            @media screen and (min-width: 1000px){
-              width: 226px;
-              height: 160px;
-              font-size: 70%;
-             }
-             @media screen and (min-width: 1200px){
-              width: 275px;
-              height: 170px;
-              font-size: 85%;
-             }
-             @media screen and (min-width: 1500px){
-              width: 305px;
-             }
+        @media screen and (min-width: 1000px) {
+          width: 226px;
+          height: 160px;
+          font-size: 70%;
         }
-          &--3elements{
-            @media screen and (min-width: 890px){
-                width: 275px;
-                height: 130px;
-                font-size: 65%;
-                @include colonne-center;
-              }
-              @media screen and (min-width: 1000px){
-                width: 308px;
-                height: 160px;
-                font-size: 75%;
-               }
-               @media screen and (min-width: 1200px){
-                width: 375px;
-                height: 170px;
-                font-size: 85%;
-               }
-               @media screen and (min-width: 1500px){
-                width: 420px;
-               }
+        @media screen and (min-width: 1200px) {
+          width: 275px;
+          height: 170px;
+          font-size: 85%;
+        }
+        @media screen and (min-width: 1500px) {
+          width: 305px;
+        }
+      }
+      &--3elements {
+        @media screen and (min-width: 890px) {
+          width: 275px;
+          height: 130px;
+          font-size: 65%;
+          @include colonne-center;
+        }
+        @media screen and (min-width: 1000px) {
+          width: 308px;
+          height: 160px;
+          font-size: 75%;
+        }
+        @media screen and (min-width: 1200px) {
+          width: 375px;
+          height: 170px;
+          font-size: 85%;
+        }
+        @media screen and (min-width: 1500px) {
+          width: 420px;
+        }
+      }
+      &__txt {
+        padding: 12px 0 0 12px;
+        background-color: white;
+        width: 100%;
+        font-size: 105%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        @media screen and (min-width: 890px) {
+          width: 97.5%;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 15px;
+          height: 50%;
+          font-size: 115%;
+          padding: 20px 7px 5px 7px;
+        }
+        h4 {
+          width: 100%;
+          font-size: 105%;
+          @include txt-hidden;
+          @extend %Roboto-light;
+          font-weight: bold;
+          @media screen and (min-width: 890px) {
+            @include no-txt-hidden;
           }
-          &__txt{
-            padding: 12px 0 0 12px;
-            background-color: white;
+        }
+        p {
+          width: 100%;
+          font-size: 85%;
+          @include txt-hidden;
+          @extend %Roboto-light;
+          @media screen and (min-width: 890px) {
+            @include no-txt-hidden;
             width: 100%;
-            font-size: 105%;
-              border-top-left-radius: 15px;
-              border-bottom-left-radius: 15px;
-              @media screen and (min-width: 890px){
-                width: 97.5%;
-                border-bottom-left-radius: 0;
-                border-top-right-radius: 15px;
-                height: 50%;
-                font-size: 115%;
-                padding: 20px 7px 5px 7px;
-              }
-              h4{
-                width: 100%;
-                font-size: 105%;
-                @include txt-hidden;
-                @extend %Roboto-light;
-                font-weight: bold;
-                @media screen and (min-width: 890px){
-                  @include no-txt-hidden;
-                }
-              }
-              p{
-                width: 100%;
-                font-size: 85%;
-                @include txt-hidden;
-                @extend %Roboto-light;
-                @media screen and (min-width: 890px){
-                  @include no-txt-hidden;
-                  width: 100%;
-                }
-              }
-              .gras{
-                text-align: end;
-                width: 80px;
-                position: relative;
-                bottom: 14px;
-                left: 86%;
-                font-size: 90%;
-                color: $gris;
-                transition: .4s;
-                @media screen and (min-width: 890px){
-                  text-align: center;
-                  width: 100%;
-                  left: 0;
-                  bottom: 0;
-                  top: 25px;
-                  font-size: 130%;
-                }
-              }
           }
+        }
+        .gras {
+          text-align: end;
+          width: 80px;
+          position: relative;
+          bottom: 14px;
+          left: 86%;
+          font-size: 90%;
+          color: $gris;
+          transition: 0.4s;
+          @media screen and (min-width: 890px) {
+            text-align: center;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            top: 25px;
+            font-size: 130%;
+          }
+        }
+      }
     }
+  }
 }
-
