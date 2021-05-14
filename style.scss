@@ -55,29 +55,27 @@ body {
     margin: 0;
   }
 }
-.loader{
+.loader {
   margin: 0;
   padding: 0;
   color: black;
   font-size: 32px;
   text-align: center;
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   z-index: 11;
-  div{
+  div {
     height: 0.1px;
     width: 100%;
     transform: translate(0, -50px);
     animation: loader-translate 2s linear;
-    span{
+    span {
       margin: 0 5px 10px 0;
       display: inline-block;
       vertical-align: middle;
-      width: 20px;
-      height: 20px;
-      border-radius: 20px;
+      @include rond20px;
       border: 8px solid rgba(50, 50, 50, 0.4);
       position: relative;
-      &:after{
+      &:after {
         content: "";
         position: absolute;
         top: -8px;
@@ -112,12 +110,12 @@ body {
   }
   &__figure {
     @include flex-center;
-    img{
+    img {
       animation: loader-opac 2s linear;
     }
   }
 }
-main{
+main {
   z-index: 9;
 }
 .header--index {
@@ -146,15 +144,17 @@ main{
   @include padding-hb;
   h3 {
     text-align: center;
-    width: 60%;
+    width: 70%;
   }
   &__paragraphe {
-    width: 80%;
+    width: 90%;
+    font-size: 80%;
     color: $gris;
     text-align: center;
     margin-bottom: 25px;
   }
   &__bouton {
+    font-size: 75%;
     margin-bottom: 25px;
     @include couleur-btn;
     @include ombre;
@@ -167,6 +167,8 @@ main{
   @include margin-hb;
   h3 {
     width: 90%;
+    font-size: 150%;
+    margin-bottom: 25px;
     @extend %max600;
     @media screen and (min-width: 890px) {
       max-width: initial;
@@ -184,36 +186,37 @@ main{
   }
 }
 .nav-conteneur {
-  border-radius: 30px;
+  border-radius: 20px;
   width: 100%;
   background-color: $beigeclair;
   transition: background-color 0.5s;
-  @include margin-hb;
+  margin-bottom: 15px;
   @include ombre;
   @media screen and (min-width: 890px) {
     margin-right: 25px;
   }
   &:hover {
-    color: $violet;
     background-color: white;
     transition: 0.5s;
   }
   &__block {
     @include flex-between;
     align-items: center;
-    width: 85%;
-    height: 100px;
-    border-radius: 30px;
+    width: 75%;
+    font-size: 100%;
+    height: 70px;
+    border-radius: 20px;
     color: $grisclair;
     transition: color 0.5s;
     @media screen and (min-width: 400px) {
-      width: 85%;
+      width: 75%;
       font-size: 130%;
     }
     @media screen and (min-width: 890px) {
       height: 100px;
       width: 100%;
-      font-size: 90%;
+      font-size: 100%;
+      @include flex-center;
     }
     @media screen and (min-width: 1000px) {
       font-size: 110%;
@@ -222,7 +225,7 @@ main{
       font-size: 130%;
     }
     h4 {
-      @extend %Roboto-regular;
+      @extend %Roboto-light;
       font-weight: bold;
       overflow: hidden;
       white-space: nowrap;
@@ -231,30 +234,34 @@ main{
         right: 20px;
       }
       @media screen and (min-width: 1200px) {
-        right: 40px;
+        right: 20px;
       }
     }
     &:hover {
       color: $violet;
     }
     &__num {
-      font-size: 80%;
+      font-size: 90%;
       background-color: $violet;
       color: white;
-      border-radius: 30px;
       position: relative;
       right: 15px;
-      padding: 5px 12px 5px 12px;
+      @include rond30px;
       @extend %Roboto-regular;
       @include flex-center;
       @media screen and (min-width: 890px) {
         position: relative;
-        left: 42%;
+        left: 38%;
         top: 50px;
         font-size: 140%;
-        padding: 7px 15px 7px 15px;
+        @include rond35px;
         @media screen and (min-width: 1000px) {
-          padding: 7px 18px 7px 18px;
+          left: 35%;
+          @include rond45px;
+        }
+        @media screen and (min-width: 1200px) {
+          left: 32%;
+          @include rond45px;
         }
       }
     }

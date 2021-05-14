@@ -245,7 +245,7 @@ main #main .commander__bouton {
   font-size: 90%;
   width: 90%;
   border-radius: 15px;
-  margin: 0 15px 30px 15px;
+  margin: 0 15px 15px 15px;
   box-shadow: 1px 5px 5px 2px #cacaca;
 }
 @media screen and (min-width: 890px) {
@@ -268,7 +268,7 @@ main #main .commander__bouton {
   }
 }
 .main-menu .menu .plat-conteneur:hover .plat-conteneur__txt .gras {
-  transform: translate(-100%);
+  transform: translate(-70%);
   transition: 0.4s;
 }
 @media screen and (min-width: 890px) {
@@ -395,27 +395,28 @@ main #main .commander__bouton {
 }
 .main-menu .menu .plat-conteneur__txt h4 {
   width: 100%;
-  font-size: 105%;
+  font-size: 95%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 500px) {
   .main-menu .menu .plat-conteneur__txt h4 {
     white-space: initial;
     overflow: initial;
     text-overflow: initial;
+    font-size: 105%;
   }
 }
 .main-menu .menu .plat-conteneur__txt p {
-  width: 100%;
+  width: 80%;
   font-size: 85%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 500px) {
   .main-menu .menu .plat-conteneur__txt p {
     white-space: initial;
     overflow: initial;
@@ -428,10 +429,14 @@ main #main .commander__bouton {
   width: 80px;
   position: relative;
   bottom: 14px;
-  left: 86%;
+  left: 83%;
   font-size: 90%;
-  color: #353535;
   transition: 0.4s;
+}
+@media screen and (min-width: 500px) {
+  .main-menu .menu .plat-conteneur__txt .gras {
+    left: 90%;
+  }
 }
 @media screen and (min-width: 890px) {
   .main-menu .menu .plat-conteneur__txt .gras {

@@ -183,7 +183,7 @@ main {
       font-size: 90%;
       width: 90%;
       border-radius: 15px;
-      margin: 0 15px 30px 15px;
+      margin: 0 15px 15px 15px;
       @include ombre;
       @media screen and (min-width: 890px) {
         @include colonne;
@@ -199,7 +199,7 @@ main {
       }
       &:hover {
         .plat-conteneur__txt .gras {
-          transform: translate(-100%);
+          transform: translate(-70%);
           transition: 0.4s;
           @media screen and (min-width: 890px) {
             transform: translate(0, -100%);
@@ -297,20 +297,21 @@ main {
         }
         h4 {
           width: 100%;
-          font-size: 105%;
+          font-size: 95%;
           @include txt-hidden;
           @extend %Roboto-light;
           font-weight: bold;
-          @media screen and (min-width: 890px) {
+          @media screen and (min-width: 500px) {
             @include no-txt-hidden;
+            font-size: 105%;
           }
         }
         p {
-          width: 100%;
+          width: 80%;
           font-size: 85%;
           @include txt-hidden;
           @extend %Roboto-light;
-          @media screen and (min-width: 890px) {
+          @media screen and (min-width: 500px) {
             @include no-txt-hidden;
             width: 100%;
           }
@@ -320,10 +321,12 @@ main {
           width: 80px;
           position: relative;
           bottom: 14px;
-          left: 86%;
+          left: 83%;
           font-size: 90%;
-          color: $gris;
           transition: 0.4s;
+          @media screen and (min-width: 500px) {
+            left: 90%;
+          }
           @media screen and (min-width: 890px) {
             text-align: center;
             width: 100%;
