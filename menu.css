@@ -1,5 +1,5 @@
 @import "regles.css";
-main #main section, .pre-header__logoposition {
+main #main section, header .header__logoposition {
   max-width: 600px;
 }
 
@@ -12,40 +12,20 @@ main #main .commander {
   font-weight: lighter;
 }
 
-.header {
-  height: 250px;
-}
-.header--lapalettedugout {
-  background: no-repeat url(base/images/lapalettedugout.jpg);
-  background-size: cover;
-}
-.header--lanoteenchantee {
-  background: no-repeat url(base/images/lanoteenchantee.jpg);
-  background-size: cover;
-}
-.header--alafrancaise {
-  background: no-repeat url(base/images/alafrancaise.jpg);
-  background-size: cover;
-}
-.header--ledelicedessens {
-  background: no-repeat url(base/images/ledelicedessens.jpg);
-  background-size: cover;
-}
-
-.pre-header {
+header {
   position: sticky;
   top: 0.1px;
   display: flex;
   flex-direction: column;
   z-index: 10;
 }
-.pre-header a,
-.pre-header a:hover,
-.pre-header a:active,
-.pre-header a:visited {
+header a,
+header a:hover,
+header a:active,
+header a:visited {
   color: black;
 }
-.pre-header--size {
+header .header {
   height: 70px;
   box-shadow: -2px 3px 5px 0px gray;
   background-color: white;
@@ -54,19 +34,14 @@ main #main .commander {
   align-items: center;
   justify-content: center;
 }
-.pre-header__figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.pre-header__arrow {
+header .header__arrow {
   color: #353535;
   position: relative;
   left: 30px;
   z-index: 11;
   font-size: 140%;
 }
-.pre-header__logoposition {
+header .header__logoposition {
   position: relative;
   width: 100%;
   display: flex;
@@ -74,9 +49,29 @@ main #main .commander {
   justify-content: center;
 }
 @media screen and (min-width: 890px) {
-  .pre-header__logoposition {
+  header .header__logoposition {
     max-width: 850px;
   }
+}
+
+.background {
+  height: 250px;
+}
+.background--lapalettedugout {
+  background: no-repeat url(base/images/lapalettedugout.jpg);
+  background-size: cover;
+}
+.background--lanoteenchantee {
+  background: no-repeat url(base/images/lanoteenchantee.jpg);
+  background-size: cover;
+}
+.background--alafrancaise {
+  background: no-repeat url(base/images/alafrancaise.jpg);
+  background-size: cover;
+}
+.background--ledelicedessens {
+  background: no-repeat url(base/images/ledelicedessens.jpg);
+  background-size: cover;
 }
 
 main #main {

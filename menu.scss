@@ -3,7 +3,39 @@
 @import "utils/extensions.scss";
 @import "regles.css";
 
-.header {
+header {
+  @include fixed;
+  @include colonne;
+  z-index: 10;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: black;
+  }
+  .header {
+    @include header;
+    @include flex-center;
+    &__arrow {
+      color: $gris;
+      position: relative;
+      left: 30px;
+      z-index: 11;
+      font-size: 140%;
+    }
+    &__logoposition {
+      position: relative;
+      width: 100%;
+      @extend %max600;
+      @include flex-center;
+      @media screen and (min-width: 890px) {
+        max-width: 850px;
+      }
+    }
+  }
+  
+}
+.background {
   height: 250px;
   &--lapalettedugout {
     background: no-repeat url(base/images/lapalettedugout.jpg);
@@ -20,43 +52,6 @@
   &--ledelicedessens {
     background: no-repeat url(base/images/ledelicedessens.jpg);
     background-size: cover;
-  }
-}
-.pre-header {
-  @include fixed;
-  @include colonne;
-  z-index: 10;
-  a,
-  a:hover,
-  a:active,
-  a:visited {
-    color: black;
-  }
-  &--size {
-    height: 70px;
-    box-shadow: -2px 3px 5px 0px gray;
-    background-color: white;
-    z-index: 1;
-    @include flex-center;
-  }
-  &__figure {
-    @include flex-center;
-  }
-  &__arrow {
-    color: $gris;
-    position: relative;
-    left: 30px;
-    z-index: 11;
-    font-size: 140%;
-  }
-  &__logoposition {
-    position: relative;
-    width: 100%;
-    @extend %max600;
-    @include flex-center;
-    @media screen and (min-width: 890px) {
-      max-width: 850px;
-    }
   }
 }
 main {

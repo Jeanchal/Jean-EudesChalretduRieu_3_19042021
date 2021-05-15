@@ -23,35 +23,33 @@
         </figure>
     </header>
     <main>
-        <div class="header--index">
-            <!--Exlorer nos restaurants-->
-            <div class="header-section">
-                <!--Localisation-->
-                <div class="header-section__localisation">
-                    <p><i class="fas fa-map-marker-alt"></i> Paris, Belleville</p>
-                </div>
-                <div class="header-explorer">
-                    <h3>Réservez le menu qui vous convient</h3>
-                    <p class="header-explorer__paragraphe">Découvrez des restaurants d'exception, sélectionnés par nos
-                        soins
-                    </p>
-                    <a href="#restaurants">
-                        <p class="header-explorer__bouton">Explorer nos restaurants</p>
-                    </a>
-                </div>
+        <!--Exlorer nos restaurants-->
+        <div class="explorer">
+            <!--Localisation-->
+            <div class="explorer__localisation">
+                <p><i class="fas fa-map-marker-alt"></i> Paris, Belleville</p>
+            </div>
+            <div class="explorer__reserver">
+                <h3>Réservez le menu qui vous convient</h3>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos
+                    soins
+                </p>
+                <a href="#restaurants">
+                    <p>Explorer nos restaurants</p>
+                </a>
             </div>
         </div>
         <!--section-navigation-->
         <section class="nav-section">
             <h3>Fonctionnement</h3>
             <!--Navigation-->
-            <nav id="nav">
+            <nav>
                 <!--Choisissez un restaurant-->
                 <div class="nav-conteneur">
                     <a href="#">
                         <div class="nav-conteneur__block">
-                            <div class="nav-conteneur__block__num">1</div>
-                            <div class="nav-conteneur__block__icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div>1</div>
+                            <div><i class="fas fa-mobile-alt"></i></div>
                             <h4>Choisissez un restaurant</h4>
                         </div>
                     </a>
@@ -60,8 +58,8 @@
                 <div class="nav-conteneur">
                     <a href="#">
                         <div class="nav-conteneur__block">
-                            <div class="nav-conteneur__block__num">2</div>
-                            <div class="nav-conteneur__block__icon"><i class="fas fa-list-ul"></i></div>
+                            <div>2</div>
+                            <div><i class="fas fa-list-ul"></i></div>
                             <h4>Composez votre menu</h4>
                         </div>
                     </a>
@@ -70,8 +68,8 @@
                 <div class="nav-conteneur">
                     <a href="#">
                         <div class="nav-conteneur__block">
-                            <div class="nav-conteneur__block__num">3</div>
-                            <div class="nav-conteneur__block__icon"><i class="fas fa-store"></i></div>
+                            <div>3</div>
+                            <div><i class="fas fa-store"></i></div>
                             <h4>Dégustez au restaurant</h4>
                         </div>
                     </a>
@@ -82,101 +80,61 @@
             <!--Restaurants-->
             <section id="restaurants" class="restaurant">
                 <h3>Restaurants</h3>
-                <!--Restaurants-conteneur-->
+<!--Restaurants-conteneur-->
                 <div class="restaurant-conteneur">
-                    <!--La palette du goût-->
+<!--La palette du goût-->
                     <div class="restaurant-block">
-                        <a href="menu-1.html">
-                            <figure class="restaurant-block__figure"><img src="base/images/lapalettedugout.jpg" alt=""
-                                    class="restaurant-block__figure__image" /></figure>
-                        </a>
+                        <a href="menu-1.html"><figure class="restaurant-block__figure"><img src="base/images/lapalettedugout.jpg" class="restaurant-block__figure__image"/></figure>
                         <div class="restaurant-block__txt">
-                            <a href="menu-1.html">
-                                <div>
-                                    <h4>La palette du goût</h4>
-                                    <p>Ménilmontant</p>
-                                </div>
-                            </a>
+                            <div>
+                                <h4>La palette du goût</h4>
+                                <p>Ménilmontant</p>
+                            </div>
                             <div class="restaurant-block__txt__icons">
-                                <a href="menu-1.html">
-                                    <p class="restaurant-block__txt__icons__nouveau">Nouveau</p>
-                                </a>
-                                <a href="#restaurants">
-                                    <div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i>
-                                    </div>
-                                </a>
+                                <p class="restaurant-block__txt__icons__nouveau">Nouveau</p></a>
+                                <a href="#restaurants"><div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i></div></a>
                             </div>
                         </div>
                     </div>
-                    <!--La note enchantée-->
+<!--La note enchantée-->
                     <div class="restaurant-block">
-                        <a href="menu-2.html">
-                            <figure class="restaurant-block__figure"><img src="base/images/lanoteenchantee.jpg" alt=""
-                                    class="restaurant-block__figure__image" /></figure>
-                        </a>
+                        <a href="menu-2.html"><figure class="restaurant-block__figure"><img src="base/images/lanoteenchantee.jpg" class="restaurant-block__figure__image"/></figure>
                         <div class="restaurant-block__txt">
-                            <a href="menu-2.html">
-                                <div>
-                                    <h4>La note enchantée</h4>
-                                    <p>Charonne</p>
-                                </div>
-                            </a>
+                            <div>
+                                <h4>La note enchantée</h4>
+                                <p>Charonne</p>
+                            </div>
                             <div class="restaurant-block__txt__icons">
-                                <a href="menu-2.html">
-                                    <p class="restaurant-block__txt__icons__nouveau">Nouveau</p>
-                                </a>
-                                <a href="#restaurants">
-                                    <div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i>
-                                    </div>
-                                </a>
+                                <p class="restaurant-block__txt__icons__nouveau">Nouveau</p></a>
+                                <a href="#restaurants"><div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i></div></a>
                             </div>
                         </div>
                     </div>
-                    <!--A la française-->
+<!--A la française-->
                     <div class="restaurant-block">
-                        <a href="menu-3.html">
-                            <figure class="restaurant-block__figure"><img src="base/images/alafrancaise.jpg" alt=""
-                                    class="restaurant-block__figure__image" /></figure>
-                        </a>
+                        <a href="menu-3.html"><figure class="restaurant-block__figure"><img src="base/images/alafrancaise.jpg" class="restaurant-block__figure__image"/></figure>
                         <div class="restaurant-block__txt">
-                            <a href="menu-3.html">
-                                <div>
-                                    <h4>À la française</h4>
-                                    <p>Cité Rouge</p>
-                                </div>
-                            </a>
+                            <div>
+                                <h4>À la française</h4>
+                                <p>Cité Rouge</p>
+                            </div>
                             <div class="restaurant-block__txt__icons">
-                                <a href="menu-3.html">
-                                    <p class="restaurant-block__txt__icons__nouveau">Nouveau</p>
-                                </a>
-                                <a href="#restaurants">
-                                    <div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i>
-                                    </div>
-                                </a>
+                                <p class="restaurant-block__txt__icons__nouveau">Nouveau</p></a>
+                                <a href="#restaurants"><div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i></div></a>
                             </div>
                         </div>
                     </div>
-                    <!--Le Délice des sens-->
+<!--Le Délice des sens-->
                     <div class="restaurant-block">
-                        <a href="menu-4.html">
-                            <figure class="restaurant-block__figure"><img src="base/images/ledelicedessens.jpg" alt=""
-                                    class="restaurant-block__figure__image" /></figure>
-                        </a>
+                        <a href="menu-4.html"><figure class="restaurant-block__figure"><img src="base/images/ledelicedessens.jpg" class="restaurant-block__figure__image"/></figure>
                         <div class="restaurant-block__txt">
-                            <a href="menu-4.html">
-                                <div>
-                                    <h4>Le délice des sens</h4>
-                                    <p>Folie-Méricourt</p>
-                                </div>
-                            </a>
+                            <div>
+                                <h4>Le délice des sens</h4>
+                                <p>Folie-Méricourt</p>
+                            </div>
                             <div class="restaurant-block__txt__icons">
-                                <a href="menu-4.html">
-                                    <p class="restaurant-block__txt__icons__nouveau">Nouveau</p>
-                                </a>
-                                <a href="#restaurants">
-                                    <div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i>
-                                    </div>
-                                </a>
+                                <p class="restaurant-block__txt__icons__nouveau">Nouveau</p></a>
+                                <a href="#restaurants"><div class="restaurant-block__txt__icons__coeur"><i class="fas fa-heart"></i></div></a>
                             </div>
                         </div>
                     </div>

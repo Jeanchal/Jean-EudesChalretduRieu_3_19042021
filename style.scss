@@ -55,6 +55,26 @@ body {
     margin: 0;
   }
 }
+.index-header {
+  @include fixed;
+  @include colonne;
+  z-index: 10;
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    color: black;
+  }
+  figure {
+    animation: loader-size 2s linear;
+    box-shadow: 0px 3px 5px 0px gray;
+    @include header;
+    @include flex-center;
+    img {
+      animation: loader-opac 2s linear;
+    }
+  }
+}
 .loader {
   margin: 0;
   padding: 0;
@@ -90,45 +110,11 @@ body {
     }
   }
 }
-.index-header {
-  @include fixed;
-  @include colonne;
-  z-index: 10;
-  a,
-  a:hover,
-  a:active,
-  a:visited {
-    color: black;
-  }
-  &--size {
-    height: 70px;
-    animation: loader-size 2s linear;
-    box-shadow: -2px 3px 5px 0px gray;
-    background-color: white;
-    z-index: 1;
-    @include flex-center;
-  }
-  &__figure {
-    @include flex-center;
-    img {
-      animation: loader-opac 2s linear;
-    }
-  }
-}
 main {
   z-index: 9;
 }
-.header--index {
+.explorer {
   font-size: 120%;
-  z-index: 8;
-  a,
-  a:hover,
-  a:active,
-  a:visited {
-    color: black;
-  }
-}
-.header-section {
   &__localisation {
     @include flex-center;
     background-color: $beige;
@@ -136,29 +122,29 @@ main {
     color: $gris;
     @include padding-hb;
   }
-}
-.header-explorer {
-  background-color: $beigeclair;
-  width: 100%;
-  @include colonne-center;
-  @include padding-hb;
-  h3 {
-    text-align: center;
-    width: 70%;
-  }
-  &__paragraphe {
-    width: 90%;
-    font-size: 80%;
-    color: $gris;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-  &__bouton {
-    font-size: 75%;
-    margin-bottom: 25px;
-    @include couleur-btn;
-    @include ombre;
-    @extend %Roboto-regular;
+  &__reserver {
+    background-color: $beigeclair;
+    width: 100%;
+    @include colonne-center;
+    @include padding-hb;
+    h3 {
+      text-align: center;
+      width: 70%;
+    }
+    :nth-child(2) {
+      width: 90%;
+      font-size: 80%;
+      color: $gris;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    a p {
+      font-size: 75%;
+      margin-bottom: 25px;
+      @include couleur-btn;
+      @include ombre;
+      @extend %Roboto-regular;
+    }
   }
 }
 .nav-section {
@@ -206,10 +192,7 @@ main {
     font-size: 100%;
     height: 70px;
     border-radius: 20px;
-    color: $grisclair;
-    transition: color 0.5s;
     @media screen and (min-width: 400px) {
-      width: 75%;
       font-size: 130%;
     }
     @media screen and (min-width: 890px) {
@@ -224,23 +207,12 @@ main {
     @media screen and (min-width: 1290px) {
       font-size: 130%;
     }
-    h4 {
-      @extend %Roboto-light;
-      font-weight: bold;
-      overflow: hidden;
-      white-space: nowrap;
-      @media screen and (min-width: 890px) {
-        position: relative;
-        right: 20px;
-      }
-      @media screen and (min-width: 1200px) {
-        right: 20px;
-      }
-    }
     &:hover {
-      color: $violet;
+      div:nth-child(2) {
+        color: $violet;
+      }
     }
-    &__num {
+    div:nth-child(1) {
       font-size: 90%;
       background-color: $violet;
       color: white;
@@ -250,7 +222,6 @@ main {
       @extend %Roboto-regular;
       @include flex-center;
       @media screen and (min-width: 890px) {
-        position: relative;
         left: 38%;
         top: 50px;
         font-size: 140%;
@@ -265,10 +236,12 @@ main {
         }
       }
     }
-    &__icon {
+    div:nth-child(2) {
       text-align: center;
       font-size: 110%;
       padding-right: 10px;
+      color: $grisclair;
+      transition: color 0.5s;
       @media screen and (min-width: 890px) {
         font-size: 140%;
         position: relative;
@@ -276,12 +249,24 @@ main {
       }
     }
     h4 {
+      @extend %Roboto-light;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
       font-size: 85%;
       color: black;
+      @media screen and (min-width: 890px) {
+        position: relative;
+        right: 20px;
+      }
+      @media screen and (min-width: 1200px) {
+        right: 20px;
+      }
     }
   }
 }
 .restaurant-general-conteneur {
+  z-index: 9;
   background-color: $beigeclair;
   @include colonne-center;
   @media screen and (min-width: 890px) {
@@ -294,26 +279,26 @@ main {
     color: black;
   }
 }
-.restaurant {
+.restaurant{
   width: 90%;
   @include colonne-center;
   @include padding-hb;
   @extend %max600;
-  @media screen and (min-width: 890px) {
-    max-width: initial;
-  }
-  h3 {
-    width: 100%;
-    font-size: 150%;
-  }
-  &-conteneur {
-    width: 100%;
-    @media screen and (min-width: 890px) {
-      @include flex-between;
-      flex-wrap: wrap;
+  @media screen and (min-width: 890px){
+  max-width: initial;
+}
+  h3{
+      width: 100%;
+      font-size: 150%;
+      }
+  &-conteneur{
+      width: 100%;
+      @media screen and (min-width: 890px){
+        @include flex-between;
+        flex-wrap: wrap;
     }
   }
-  &-block {
+  &-block{
     border-radius: 20px;
     background-color: white;
     width: 100%;
@@ -321,83 +306,83 @@ main {
     @include colonne-center;
     @include margin-hb;
     @include ombre;
-    @media screen and (min-width: 890px) {
+    @media screen and (min-width: 890px){
       margin-right: 20px;
       width: 46%;
-    }
-    &__figure {
-      width: 600px;
-      height: 170px;
-      @media screen and (min-width: 500px) {
-        height: 200px;
       }
-      @media screen and (min-width: 890px) {
-        height: 230px;
-      }
-      &__image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-      }
-    }
-    &__txt {
-      @include flex-between;
-      width: 90%;
-      height: 40px;
-      padding-right: 10px;
-      @include margin-hb;
-      h4 {
-        @extend %Roboto-gras;
-        min-width: 140px;
-      }
-      p {
-        padding-top: 5px;
-      }
-      &__icons {
-        @include flex-center;
-        &__nouveau {
-          text-align: center;
-          padding: 15px 10px 0 10px;
-          height: 30px;
-          width: 70px;
-          position: relative;
-          bottom: 180px;
-          left: 30px;
-          color: $vert;
-          background-color: $vertclair;
-          border-radius: 5px;
-          font-size: 110%;
-          @extend %Roboto-regular;
-          @media screen and (min-width: 500px) {
-            bottom: 210px;
-            left: 40px;
-          }
-          @media screen and (min-width: 890px) {
-            width: 85px;
-            bottom: 240px;
-          }
+            &__figure{
+            width: 600px;
+            height: 170px;
+            @media screen and (min-width: 500px){
+              height: 200px;
+              }
+              @media screen and (min-width: 890px){
+                height: 230px;
+                }
+                &__image{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                }
+            }
+        &__txt{
+        @include flex-between;
+        width: 90%;
+        height: 40px;
+        padding-right: 10px;
+        @include margin-hb;
+        h4{
+          @extend %Roboto-gras;
+          min-width: 140px;
         }
-        &__coeur {
-          font-size: 170%;
-          color: white;
-          transition: color 0.8s;
-          @include txt-ombre;
-          &:hover {
-            text-shadow: initial;
-            color: $violet;
-            transition: 0.8s;
-          }
+        p{
+          padding-top: 5px;
+        }
+        &__icons{
+          @include flex-center;
+          &__nouveau{
+            text-align: center;
+            padding: 15px 10px 0 10px;
+            height: 30px;
+            width: 70px;
+            position: relative;
+            bottom: 180px;
+            left: 30px;
+            color: $vert;
+            background-color: $vertclair;
+            border-radius: 5px;
+            font-size: 110%;
+            @extend %Roboto-regular;
+            @media screen and (min-width: 500px){
+              bottom: 210px;
+              left: 40px;
+              }
+            @media screen and (min-width: 890px){
+              width: 85px;
+              bottom: 240px;
+              }
+      }
+      &__coeur{
+        font-size: 170%;
+        color: white;
+        transition: color .8s;
+        @include txt-ombre;
+        &:hover{
+          text-shadow: initial;
+          color: $violet;
+          transition: .8s;
         }
       }
+      }
+          }
     }
   }
-}
 footer {
   font-size: 120%;
   z-index: 7;
