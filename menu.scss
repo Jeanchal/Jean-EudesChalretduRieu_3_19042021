@@ -85,8 +85,13 @@ main {
       &__bouton {
         font-size: 120%;
         width: 130px;
+        transition: box-shadow 0.4s, filter 0.4s;
         @include couleur-btn;
         @include ombre;
+        &:hover{
+          @include ombre-tres-sombre;
+          filter: brightness(1.1);
+        }
       }
     }
   }
@@ -118,15 +123,16 @@ main {
     margin-right: 15px;
     font-size: 150%;
     color: $beigeclair;
-    transition: color 0.8s;
+    background: linear-gradient(to right top, $rose, $violet);
+    background-clip: text;
+    transition: color 0.4s, text-shadow 0.4s;
     @include txt-ombre;
     @media screen and (min-width: 890px) {
       font-size: 170%;
     }
     &:hover {
       text-shadow: initial;
-      color: $violet;
-      transition: 0.8s;
+      color: transparent;
     }
   }
 }
@@ -180,6 +186,7 @@ main {
       border-radius: 15px;
       margin: 0 15px 15px 15px;
       @include ombre;
+      transition: box-shadow 0.4s;
       @media screen and (min-width: 890px) {
         @include colonne;
         text-align: center;
@@ -193,9 +200,9 @@ main {
         margin: 0 15px 0 15px;
       }
       &:hover {
+        @include ombre-sombre;
         .plat-conteneur__txt .gras {
           transform: translate(-70%);
-          transition: 0.4s;
           @media screen and (min-width: 890px) {
             transform: translate(0, -100%);
           }
@@ -318,7 +325,7 @@ main {
           bottom: 14px;
           left: 83%;
           font-size: 90%;
-          transition: 0.4s;
+          transition: all 0.4s;
           @media screen and (min-width: 500px) {
             left: 90%;
           }

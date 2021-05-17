@@ -67,7 +67,6 @@ body {
   }
   figure {
     animation: loader-size 2s linear;
-    box-shadow: 0px 3px 5px 0px gray;
     @include header;
     @include flex-center;
     img {
@@ -143,7 +142,12 @@ main {
       margin-bottom: 25px;
       @include couleur-btn;
       @include ombre;
+      transition: box-shadow 0.4s, filter 0.4s;
       @extend %Roboto-regular;
+      &:hover{
+        @include ombre-tres-sombre;
+        filter: brightness(1.1);
+      }
     }
   }
 }
@@ -175,7 +179,7 @@ main {
   border-radius: 20px;
   width: 100%;
   background-color: $beigeclair;
-  transition: background-color 0.5s;
+  transition: background-color 0.4s, box-shadow 0.4s;
   margin-bottom: 15px;
   @include ombre;
   @media screen and (min-width: 890px) {
@@ -183,7 +187,7 @@ main {
   }
   &:hover {
     background-color: white;
-    transition: 0.5s;
+    @include ombre-sombre;
   }
   &__block {
     @include flex-between;
@@ -241,7 +245,7 @@ main {
       font-size: 110%;
       padding-right: 10px;
       color: $grisclair;
-      transition: color 0.5s;
+      transition: color 0.4s;
       @media screen and (min-width: 890px) {
         font-size: 140%;
         position: relative;
@@ -279,26 +283,26 @@ main {
     color: black;
   }
 }
-.restaurant{
+.restaurant {
   width: 90%;
   @include colonne-center;
   @include padding-hb;
   @extend %max600;
-  @media screen and (min-width: 890px){
-  max-width: initial;
-}
-  h3{
-      width: 100%;
-      font-size: 150%;
-      }
-  &-conteneur{
-      width: 100%;
-      @media screen and (min-width: 890px){
-        @include flex-between;
-        flex-wrap: wrap;
+  @media screen and (min-width: 890px) {
+    max-width: initial;
+  }
+  h3 {
+    width: 100%;
+    font-size: 150%;
+  }
+  &-conteneur {
+    width: 100%;
+    @media screen and (min-width: 890px) {
+      @include flex-between;
+      flex-wrap: wrap;
     }
   }
-  &-block{
+  &-block {
     border-radius: 20px;
     background-color: white;
     width: 100%;
@@ -306,83 +310,88 @@ main {
     @include colonne-center;
     @include margin-hb;
     @include ombre;
-    @media screen and (min-width: 890px){
+    transition: box-shadow 0.4s;
+    @media screen and (min-width: 890px) {
       margin-right: 20px;
       width: 46%;
+    }
+    &:hover{
+      @include ombre-sombre;
+    }
+    &__figure {
+      width: 600px;
+      height: 170px;
+      @media screen and (min-width: 500px) {
+        height: 200px;
       }
-            &__figure{
-            width: 600px;
-            height: 170px;
-            @media screen and (min-width: 500px){
-              height: 200px;
-              }
-              @media screen and (min-width: 890px){
-                height: 230px;
-                }
-                &__image{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                }
-            }
-        &__txt{
-        @include flex-between;
-        width: 90%;
-        height: 40px;
-        padding-right: 10px;
-        @include margin-hb;
-        h4{
-          @extend %Roboto-gras;
-          min-width: 140px;
-        }
-        p{
-          padding-top: 5px;
-        }
-        &__icons{
-          @include flex-center;
-          &__nouveau{
-            text-align: center;
-            padding: 15px 10px 0 10px;
-            height: 30px;
-            width: 70px;
-            position: relative;
-            bottom: 180px;
-            left: 30px;
-            color: $vert;
-            background-color: $vertclair;
-            border-radius: 5px;
-            font-size: 110%;
-            @extend %Roboto-regular;
-            @media screen and (min-width: 500px){
-              bottom: 210px;
-              left: 40px;
-              }
-            @media screen and (min-width: 890px){
-              width: 85px;
-              bottom: 240px;
-              }
+      @media screen and (min-width: 890px) {
+        height: 230px;
       }
-      &__coeur{
-        font-size: 170%;
-        color: white;
-        transition: color .8s;
-        @include txt-ombre;
-        &:hover{
-          text-shadow: initial;
-          color: $violet;
-          transition: .8s;
-        }
+      &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
+    }
+    &__txt {
+      @include flex-between;
+      width: 90%;
+      height: 40px;
+      padding-right: 10px;
+      @include margin-hb;
+      h4 {
+        @extend %Roboto-gras;
+        min-width: 140px;
       }
+      p {
+        padding-top: 5px;
+      }
+      &__icons {
+        @include flex-center;
+        &__nouveau {
+          text-align: center;
+          padding: 15px 10px 0 10px;
+          height: 30px;
+          width: 70px;
+          position: relative;
+          bottom: 180px;
+          left: 30px;
+          color: $vert;
+          background-color: $vertclair;
+          border-radius: 5px;
+          font-size: 110%;
+          @extend %Roboto-regular;
+          @media screen and (min-width: 500px) {
+            bottom: 210px;
+            left: 40px;
           }
+          @media screen and (min-width: 890px) {
+            width: 85px;
+            bottom: 240px;
+          }
+        }
+        &__coeur {
+          font-size: 170%;
+          color: white;
+          background: linear-gradient(to right top, $rose, $violet);
+          background-clip: text;
+          transition: color 0.4s, text-shadow 0.4s;
+          @include txt-ombre;
+          &:hover {
+            text-shadow: initial;         
+            color: transparent;
+          }
+        }
+      }
     }
   }
+}
 footer {
   font-size: 120%;
   z-index: 7;
