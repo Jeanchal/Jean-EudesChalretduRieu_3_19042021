@@ -379,9 +379,8 @@ main {
         &__coeur {
           font-size: 170%;
           color: white;
-          background: linear-gradient(to right top, $rose, $violet);
-          background-clip: text;
           transition: color 0.4s, text-shadow 0.4s;
+          @include coeur;
           @include txt-ombre;
           &:hover {
             text-shadow: initial;         

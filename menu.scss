@@ -123,9 +123,8 @@ main {
     margin-right: 15px;
     font-size: 150%;
     color: $beigeclair;
-    background: linear-gradient(to right top, $rose, $violet);
-    background-clip: text;
     transition: color 0.4s, text-shadow 0.4s;
+    @include coeur;
     @include txt-ombre;
     @media screen and (min-width: 890px) {
       font-size: 170%;
