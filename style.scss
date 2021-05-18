@@ -144,7 +144,7 @@ main {
       @include ombre;
       transition: box-shadow 0.4s, filter 0.4s;
       @extend %Roboto-regular;
-      &:hover{
+      &:hover {
         @include ombre-tres-sombre;
         filter: brightness(1.1);
       }
@@ -315,10 +315,10 @@ main {
       margin-right: 20px;
       width: 46%;
     }
-    &:hover{
+    &:hover {
       @include ombre-sombre;
     }
-    &__figure {
+    figure {
       width: 600px;
       height: 170px;
       @media screen and (min-width: 500px) {
@@ -327,7 +327,7 @@ main {
       @media screen and (min-width: 890px) {
         height: 230px;
       }
-      &__image {
+      img {
         position: absolute;
         top: 0;
         left: 0;
@@ -354,14 +354,29 @@ main {
       }
       &__icons {
         @include flex-center;
-        &__nouveau {
+        transform: translate(-20px, 0);
+        @media screen and (min-width: 330px) {
+          transform: translate(0, 0);
+        }
+        .coeur-plein {
+          z-index: 1;
+          @include coeur;
+          color: transparent;
+          font-size: 170%;
+          position: relative;
+          left: 19%;
+          @media screen and (min-width: 890px) {
+            left: 18%;
+          }
+        }
+        p {
           text-align: center;
-          padding: 15px 10px 0 10px;
+          padding: 7px 10px 0 10px;
           height: 30px;
           width: 70px;
           position: relative;
           bottom: 180px;
-          left: 30px;
+          left: 55px;
           color: $vert;
           background-color: $vertclair;
           border-radius: 5px;
@@ -369,22 +384,21 @@ main {
           @extend %Roboto-regular;
           @media screen and (min-width: 500px) {
             bottom: 210px;
-            left: 40px;
           }
           @media screen and (min-width: 890px) {
             width: 85px;
             bottom: 240px;
           }
         }
-        &__coeur {
+        .coeur-vide {
+          z-index: 2;
           font-size: 170%;
           color: white;
-          transition: color 0.4s, text-shadow 0.4s;
-          @include coeur;
           @include txt-ombre;
+          opacity: 1;
+          transition: opacity 0.4s ease-in-out;
           &:hover {
-            text-shadow: initial;         
-            color: transparent;
+            opacity: 0;
           }
         }
       }

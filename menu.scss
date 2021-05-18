@@ -33,7 +33,6 @@ header {
       }
     }
   }
-  
 }
 .background {
   height: 250px;
@@ -88,7 +87,7 @@ main {
         transition: box-shadow 0.4s, filter 0.4s;
         @include couleur-btn;
         @include ombre;
-        &:hover{
+        &:hover {
           @include ombre-tres-sombre;
           filter: brightness(1.1);
         }
@@ -109,29 +108,43 @@ main {
   }
   h2 {
     font-weight: lighter;
-    font-size: 207%;
+    font-size: 180%;
+    white-space: nowrap;
     margin-right: 5px;
-    @include txt-hidden;
     @media screen and (min-width: 350px) {
-      margin-right: 40px;
+    font-size: 207%;
     }
     @media screen and (min-width: 1000px) {
       font-size: 250%;
     }
   }
   &__coeur {
+    display: flex;
     margin-right: 15px;
-    font-size: 150%;
-    color: $beigeclair;
-    transition: color 0.4s, text-shadow 0.4s;
-    @include coeur;
-    @include txt-ombre;
+    font-size: 120%;
     @media screen and (min-width: 890px) {
       font-size: 170%;
     }
-    &:hover {
-      text-shadow: initial;
+    div {
+      z-index: 1;
+      padding: 5px 5px 5px 5px;
+      @include coeur;
       color: transparent;
+      font-size: 150%;
+      position: relative;
+      left: 50%;
+    }
+    a {
+      z-index: 2;
+      margin: 5px 5px 5px 5px;
+      font-size: 150%;
+      color: $beigeclair;
+      @include txt-ombre;
+      opacity: 1;
+      transition: opacity 0.4s ease-in-out;
+      &:hover {
+        opacity: 0;
+      }
     }
   }
 }
@@ -225,10 +238,13 @@ main {
         transition: all 0.4s ease-in-out;
         transition-property: transform, opacity;
         text-align: center;
-        padding-top: 25px;
+        padding-top: 22px;
         width: 70px;
         font-size: 140%;
         color: white;
+        @media screen and (min-width: 500px) {
+          padding-top: 25px;
+        }
         @media screen and (min-width: 890px) {
           height: 50px;
           padding-top: 9px;

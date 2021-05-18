@@ -8,7 +8,7 @@ footer #footer, .restaurant, .nav-section nav, .nav-section h3 {
   max-width: 600px;
 }
 
-.restaurant-block__txt__icons__nouveau, .nav-conteneur__block div:nth-child(1), .explorer__reserver a p, body ul, body h3 {
+.restaurant-block__txt__icons p, .nav-conteneur__block div:nth-child(1), .explorer__reserver a p, body ul, body h3 {
   font-family: "Roboto-regular", Arial, Georgia, Verdana, Impact;
 }
 
@@ -445,21 +445,21 @@ main {
 .restaurant-block:hover {
   box-shadow: 1px 5px 5px 2px #cacaca;
 }
-.restaurant-block__figure {
+.restaurant-block figure {
   width: 600px;
   height: 170px;
 }
 @media screen and (min-width: 500px) {
-  .restaurant-block__figure {
+  .restaurant-block figure {
     height: 200px;
   }
 }
 @media screen and (min-width: 890px) {
-  .restaurant-block__figure {
+  .restaurant-block figure {
     height: 230px;
   }
 }
-.restaurant-block__figure__image {
+.restaurant-block figure img {
   position: absolute;
   top: 0;
   left: 0;
@@ -491,44 +491,62 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translate(-20px, 0);
 }
-.restaurant-block__txt__icons__nouveau {
+@media screen and (min-width: 330px) {
+  .restaurant-block__txt__icons {
+    transform: translate(0, 0);
+  }
+}
+.restaurant-block__txt__icons .coeur-plein {
+  z-index: 1;
+  background: linear-gradient(to right top, #FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 170%;
+  position: relative;
+  left: 19%;
+}
+@media screen and (min-width: 890px) {
+  .restaurant-block__txt__icons .coeur-plein {
+    left: 18%;
+  }
+}
+.restaurant-block__txt__icons p {
   text-align: center;
-  padding: 15px 10px 0 10px;
+  padding: 7px 10px 0 10px;
   height: 30px;
   width: 70px;
   position: relative;
   bottom: 180px;
-  left: 30px;
+  left: 55px;
   color: #008766;
   background-color: #99E2D0;
   border-radius: 5px;
   font-size: 110%;
 }
 @media screen and (min-width: 500px) {
-  .restaurant-block__txt__icons__nouveau {
+  .restaurant-block__txt__icons p {
     bottom: 210px;
-    left: 40px;
   }
 }
 @media screen and (min-width: 890px) {
-  .restaurant-block__txt__icons__nouveau {
+  .restaurant-block__txt__icons p {
     width: 85px;
     bottom: 240px;
   }
 }
-.restaurant-block__txt__icons__coeur {
+.restaurant-block__txt__icons .coeur-vide {
+  z-index: 2;
   font-size: 170%;
   color: white;
-  transition: color 0.4s, text-shadow 0.4s;
-  background: linear-gradient(to right top, #FF79DA, #9356DC);
-  background-clip: content-box;
-  -webkit-background-clip: text;
   text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
-.restaurant-block__txt__icons__coeur:hover {
-  text-shadow: initial;
-  color: transparent;
+.restaurant-block__txt__icons .coeur-vide:hover {
+  opacity: 0;
 }
 
 footer {

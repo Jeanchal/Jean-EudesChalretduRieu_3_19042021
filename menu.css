@@ -149,15 +149,13 @@ main #main .commander__bouton:hover {
 }
 .main-titre h2 {
   font-weight: lighter;
-  font-size: 207%;
-  margin-right: 5px;
+  font-size: 180%;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-right: 5px;
 }
 @media screen and (min-width: 350px) {
   .main-titre h2 {
-    margin-right: 40px;
+    font-size: 207%;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -166,23 +164,37 @@ main #main .commander__bouton:hover {
   }
 }
 .main-titre__coeur {
+  display: flex;
   margin-right: 15px;
-  font-size: 150%;
-  color: #f6f6f6;
-  transition: color 0.4s, text-shadow 0.4s;
-  background: linear-gradient(to right top, #FF79DA, #9356DC);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
+  font-size: 120%;
 }
 @media screen and (min-width: 890px) {
   .main-titre__coeur {
     font-size: 170%;
   }
 }
-.main-titre__coeur:hover {
-  text-shadow: initial;
+.main-titre__coeur div {
+  z-index: 1;
+  padding: 5px 5px 5px 5px;
+  background: linear-gradient(to right top, #FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
   color: transparent;
+  font-size: 150%;
+  position: relative;
+  left: 50%;
+}
+.main-titre__coeur a {
+  z-index: 2;
+  margin: 5px 5px 5px 5px;
+  font-size: 150%;
+  color: #f6f6f6;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, -1px 0 0 black;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+.main-titre__coeur a:hover {
+  opacity: 0;
 }
 
 .main-menu {
@@ -304,10 +316,15 @@ main #main .commander__bouton:hover {
   transition: all 0.4s ease-in-out;
   transition-property: transform, opacity;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 22px;
   width: 70px;
   font-size: 140%;
   color: white;
+}
+@media screen and (min-width: 500px) {
+  .main-menu .menu .plat-conteneur__icon {
+    padding-top: 25px;
+  }
 }
 @media screen and (min-width: 890px) {
   .main-menu .menu .plat-conteneur__icon {
