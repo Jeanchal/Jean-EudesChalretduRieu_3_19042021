@@ -20,7 +20,7 @@
 }
 @keyframes opac{
     0%{ opacity: 0;}
-    60%{ opacity: 0.5;}
+    80%{ opacity: 0.5;}
     100%{ opacity: 1;}
 }
 @keyframes rotate{
@@ -28,8 +28,8 @@
     100%{ transform: rotate(360deg);}
 }
 @keyframes loader-size{
-    0%{ transform: scale(1.1, 80);}
-    99.99%{ transform: scale(1.1, 80);}
+    0%{ transform: scale(1, 80);}
+    99.99%{ transform: scale(1, 80);}
     100%{ transform: scale(1, 1);}
 }
 @keyframes loader-opac{
@@ -38,7 +38,10 @@
     100%{ opacity: 1;}
 }
 @keyframes loader-translate{
-    0%{ transform: translate(0, 250px);}
-    99.99%{ transform: translate(0, 250px);}
+    0%{ transform: translate(0, 270px);}
+    99.99%{ transform: translate(0, 270px);}
     100%{ transform: translate(0, -100px);}
+}
+main, footer {
+    animation: opac 3s linear;
 }

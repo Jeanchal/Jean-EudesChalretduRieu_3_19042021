@@ -121,8 +121,8 @@ body figure {
   justify-content: center;
 }
 .index-header figure img {
-  -webkit-animation: loader-opac 2s linear;
-          animation: loader-opac 2s linear;
+  -webkit-animation: loader-opac 2.1s ease-out;
+          animation: loader-opac 2.1s ease-out;
 }
 
 .loader {

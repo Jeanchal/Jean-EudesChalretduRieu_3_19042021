@@ -70,7 +70,7 @@ body {
     @include header;
     @include flex-center;
     img {
-      animation: loader-opac 2s linear;
+      animation: loader-opac 2.1s ease-out;
     }
   }
 }
