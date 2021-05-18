@@ -8,6 +8,9 @@
     animation: opac ($i * 0.7s) ease-in;
   }
 }
+#main-index, #footer-index {
+  animation: opac 3s linear;
+}
 
 body {
   margin-top: 0;

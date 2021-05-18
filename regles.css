@@ -42,6 +42,3 @@
     99.99%{ transform: translate(0, 270px);}
     100%{ transform: translate(0, -100px);}
 }
-main, footer {
-    animation: opac 3s linear;
-}

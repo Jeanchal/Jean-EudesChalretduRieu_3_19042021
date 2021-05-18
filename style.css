@@ -56,6 +56,11 @@ footer #footer section h3 {
           animation: opac 3.5s ease-in;
 }
 
+#main-index, #footer-index {
+  -webkit-animation: opac 3s linear;
+          animation: opac 3s linear;
+}
+
 body {
   margin-top: 0;
   margin-bottom: 0;
