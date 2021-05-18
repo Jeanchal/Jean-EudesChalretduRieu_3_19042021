@@ -74,6 +74,9 @@ header .header__logoposition {
   background-size: cover;
 }
 
+main {
+  background-color: #f6f6f6;
+}
 main #main {
   font-size: 78%;
   background-color: #f6f6f6;
