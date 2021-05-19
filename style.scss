@@ -8,8 +8,8 @@
     animation: opac ($i * 0.7s) ease-in;
   }
 }
-#main-index, #footer-index {
-  animation: opac 3s linear;
+.index-header figure, #main-index, #footer-index {
+  animation: opac 4s linear;
 }
 
 body {
@@ -69,12 +69,8 @@ body {
     color: black;
   }
   figure {
-    animation: loader-size 2s linear;
     @include header;
     @include flex-center;
-    img {
-      animation: loader-opac 2.1s ease-out;
-    }
   }
 }
 .loader {
@@ -361,17 +357,6 @@ main {
         @media screen and (min-width: 330px) {
           transform: translate(0, 0);
         }
-        .coeur-plein {
-          z-index: 1;
-          @include coeur;
-          color: transparent;
-          font-size: 170%;
-          position: relative;
-          left: 19%;
-          @media screen and (min-width: 890px) {
-            left: 18%;
-          }
-        }
         p {
           text-align: center;
           padding: 7px 10px 0 10px;
@@ -391,6 +376,17 @@ main {
           @media screen and (min-width: 890px) {
             width: 85px;
             bottom: 240px;
+          }
+        }
+        .coeur-plein {
+          z-index: 1;
+          @include coeur;
+          color: transparent;
+          font-size: 170%;
+          position: relative;
+          left: 19%;
+          @media screen and (min-width: 890px) {
+            left: 18%;
           }
         }
         .coeur-vide {

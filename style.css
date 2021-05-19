@@ -56,9 +56,9 @@ footer #footer section h3 {
           animation: opac 3.5s ease-in;
 }
 
-#main-index, #footer-index {
-  -webkit-animation: opac 3s linear;
-          animation: opac 3s linear;
+.index-header figure, #main-index, #footer-index {
+  -webkit-animation: opac 4s linear;
+          animation: opac 4s linear;
 }
 
 body {
@@ -115,8 +115,6 @@ body figure {
   color: black;
 }
 .index-header figure {
-  -webkit-animation: loader-size 2s linear;
-          animation: loader-size 2s linear;
   box-shadow: 0px 3px 5px 0px #cacaca;
   height: 70px;
   background-color: white;
@@ -124,10 +122,6 @@ body figure {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.index-header figure img {
-  -webkit-animation: loader-opac 2.1s ease-out;
-          animation: loader-opac 2.1s ease-out;
 }
 
 .loader {
@@ -503,21 +497,6 @@ main {
     transform: translate(0, 0);
   }
 }
-.restaurant-block__txt__icons .coeur-plein {
-  z-index: 1;
-  background: linear-gradient(to right top, #FF79DA, #9356DC);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 170%;
-  position: relative;
-  left: 19%;
-}
-@media screen and (min-width: 890px) {
-  .restaurant-block__txt__icons .coeur-plein {
-    left: 18%;
-  }
-}
 .restaurant-block__txt__icons p {
   text-align: center;
   padding: 7px 10px 0 10px;
@@ -540,6 +519,21 @@ main {
   .restaurant-block__txt__icons p {
     width: 85px;
     bottom: 240px;
+  }
+}
+.restaurant-block__txt__icons .coeur-plein {
+  z-index: 1;
+  background: linear-gradient(to right top, #FF79DA, #9356DC);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 170%;
+  position: relative;
+  left: 19%;
+}
+@media screen and (min-width: 890px) {
+  .restaurant-block__txt__icons .coeur-plein {
+    left: 18%;
   }
 }
 .restaurant-block__txt__icons .coeur-vide {
