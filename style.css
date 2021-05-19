@@ -122,6 +122,7 @@ body figure {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 11;
 }
 
 .loader {
@@ -131,7 +132,7 @@ body figure {
   font-size: 32px;
   text-align: center;
   font-family: "Shrikhand";
-  z-index: 11;
+  z-index: 9;
 }
 .loader div {
   height: 0.1px;
@@ -211,7 +212,7 @@ main {
   border-radius: 30px;
   text-align: center;
   box-shadow: 1px 5px 5px 2px #e7e7e7;
-  transition: box-shadow 0.4s, filter 0.4s;
+  transition: box-shadow 0.4s, filter 0.4s ease-in-out;
 }
 .explorer__reserver a p:hover {
   box-shadow: 1px 5px 5px 2px #969696;

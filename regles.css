@@ -37,5 +37,5 @@
 @keyframes loader-translate{
     0%{ transform: translate(0, 270px);}
     99.99%{ transform: translate(0, 270px);}
-    100%{ transform: translate(0, -100px);}
+    100%{ transform: translate(0, -100);}
 }
