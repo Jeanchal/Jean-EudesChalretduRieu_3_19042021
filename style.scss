@@ -5,7 +5,7 @@
 
 @for $i from 1 through 5 {
   .plat a:nth-child(#{$i}) {
-    animation: opac ($i * 0.7s) ease-in;
+    animation: opac2 ($i * 0.7s) ease-in;
   }
 }
 .index-header figure, #main-index, #footer-index {
@@ -179,7 +179,7 @@ main {
   border-radius: 20px;
   width: 100%;
   background-color: $beigeclair;
-  transition: background-color 0.4s, box-shadow 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s ease-in-out;
   margin-bottom: 15px;
   @include ombre;
   @media screen and (min-width: 890px) {

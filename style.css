@@ -32,28 +32,28 @@ footer #footer section h3 {
 }
 
 .plat a:nth-child(1) {
-  -webkit-animation: opac 0.7s ease-in;
-          animation: opac 0.7s ease-in;
+  -webkit-animation: opac2 0.7s ease-in;
+          animation: opac2 0.7s ease-in;
 }
 
 .plat a:nth-child(2) {
-  -webkit-animation: opac 1.4s ease-in;
-          animation: opac 1.4s ease-in;
+  -webkit-animation: opac2 1.4s ease-in;
+          animation: opac2 1.4s ease-in;
 }
 
 .plat a:nth-child(3) {
-  -webkit-animation: opac 2.1s ease-in;
-          animation: opac 2.1s ease-in;
+  -webkit-animation: opac2 2.1s ease-in;
+          animation: opac2 2.1s ease-in;
 }
 
 .plat a:nth-child(4) {
-  -webkit-animation: opac 2.8s ease-in;
-          animation: opac 2.8s ease-in;
+  -webkit-animation: opac2 2.8s ease-in;
+          animation: opac2 2.8s ease-in;
 }
 
 .plat a:nth-child(5) {
-  -webkit-animation: opac 3.5s ease-in;
-          animation: opac 3.5s ease-in;
+  -webkit-animation: opac2 3.5s ease-in;
+          animation: opac2 3.5s ease-in;
 }
 
 .index-header figure, #main-index, #footer-index {
@@ -255,7 +255,7 @@ main {
   border-radius: 20px;
   width: 100%;
   background-color: #f6f6f6;
-  transition: background-color 0.4s, box-shadow 0.4s;
+  transition: background-color 0.4s, box-shadow 0.4s ease-in-out;
   margin-bottom: 15px;
   box-shadow: 1px 5px 5px 2px #e7e7e7;
 }
