@@ -55,23 +55,79 @@ header .header__logoposition {
 }
 
 .background {
+  margin: 0;
+  overflow: hidden;
+}
+.background figure {
+  position: relative;
+  width: 350px;
   height: 250px;
 }
-.background--lapalettedugout {
-  background: no-repeat url(base/images/lapalettedugout.jpg);
-  background-size: cover;
+@media screen and (min-width: 350px) {
+  .background figure {
+    width: 450px;
+  }
 }
-.background--lanoteenchantee {
-  background: no-repeat url(base/images/lanoteenchantee.jpg);
-  background-size: cover;
+@media screen and (min-width: 420px) {
+  .background figure {
+    width: 500px;
+  }
 }
-.background--alafrancaise {
-  background: no-repeat url(base/images/alafrancaise.jpg);
-  background-size: cover;
+@media screen and (min-width: 500px) {
+  .background figure {
+    width: 600px;
+  }
 }
-.background--ledelicedessens {
-  background: no-repeat url(base/images/ledelicedessens.jpg);
-  background-size: cover;
+@media screen and (min-width: 600px) {
+  .background figure {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .background figure {
+    width: 800px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .background figure {
+    width: 900px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .background figure {
+    width: 1000px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .background figure {
+    width: 1100px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .background figure {
+    width: 1200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .background figure {
+    width: 1300px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .background figure {
+    width: 1450px;
+  }
+}
+.background figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 main {
